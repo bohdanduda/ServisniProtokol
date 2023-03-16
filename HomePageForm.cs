@@ -2,17 +2,33 @@ namespace ServisniProtokol
 {
     public partial class HomePageForm : Form
     {
-        private string protocolNumber;
         public static HomePageForm instance;
-        public TextBox txtBox_protocolNum;
-        public TextBox txtBox_date;
+        
+        //textboxs for basic info
+        public TextBox protocolNum;
+        public TextBox date;
+        //textboxs for device info
+        public TextBox maker;
+        public TextBox modelName;
+        public TextBox serialNum;
+        //textboxs for customer info
+        public TextBox name;
+        public TextBox address;
+        public TextBox postNum;
+        public TextBox id;
 
         public HomePageForm()
         {
             InitializeComponent();
             instance = this;
-            txtBox_protocolNum = this.txtBox_protocolNumber;
-            txtBox_date = this.txtBox_dateOfMeasurement;
+            protocolNum = this.txtBox_protocolNumber;
+            date = this.txtBox_dateOfMeasurement;
+            maker = this.txtBox_producerName;
+            modelName = this.txtBox_modelName;
+            serialNum = this.txtBox_serialNumber;
+            name = this.txtBox_name;
+            address = this.txtBox_address;
+            id = this.txtBox_id;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,6 +40,12 @@ namespace ServisniProtokol
         {
             BasicInfoForm basicInfoForm = new();
             basicInfoForm.ShowDialog();
+        }
+
+        private void btn_editDeviceInfo_Click(object sender, EventArgs e)
+        {
+            DeviceInfoForm deviceInfoForm = new();
+            deviceInfoForm.ShowDialog();
         }
     }
 }

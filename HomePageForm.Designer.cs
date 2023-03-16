@@ -38,11 +38,11 @@
             this.txtBox_name = new System.Windows.Forms.TextBox();
             this.txtBox_dateOfMeasurement = new System.Windows.Forms.TextBox();
             this.txtBox_protocolNumber = new System.Windows.Forms.TextBox();
-            this.btn_editItemInfo = new System.Windows.Forms.Button();
+            this.btn_editDeviceInfo = new System.Windows.Forms.Button();
             this.lbl_serialNumber = new System.Windows.Forms.Label();
             this.lbl_modelName = new System.Windows.Forms.Label();
             this.lbl_producerName = new System.Windows.Forms.Label();
-            this.lbl_item = new System.Windows.Forms.Label();
+            this.lbl_device = new System.Windows.Forms.Label();
             this.btn_editCustomerInfo = new System.Windows.Forms.Button();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_postNumber = new System.Windows.Forms.Label();
@@ -145,14 +145,15 @@
             this.txtBox_protocolNumber.TabIndex = 41;
             this.txtBox_protocolNumber.Text = "?";
             // 
-            // btn_editItemInfo
+            // btn_editDeviceInfo
             // 
-            this.btn_editItemInfo.Location = new System.Drawing.Point(652, 315);
-            this.btn_editItemInfo.Name = "btn_editItemInfo";
-            this.btn_editItemInfo.Size = new System.Drawing.Size(75, 23);
-            this.btn_editItemInfo.TabIndex = 40;
-            this.btn_editItemInfo.Text = "Upravit";
-            this.btn_editItemInfo.UseVisualStyleBackColor = true;
+            this.btn_editDeviceInfo.Location = new System.Drawing.Point(652, 315);
+            this.btn_editDeviceInfo.Name = "btn_editDeviceInfo";
+            this.btn_editDeviceInfo.Size = new System.Drawing.Size(75, 23);
+            this.btn_editDeviceInfo.TabIndex = 40;
+            this.btn_editDeviceInfo.Text = "Upravit";
+            this.btn_editDeviceInfo.UseVisualStyleBackColor = true;
+            this.btn_editDeviceInfo.Click += new System.EventHandler(this.btn_editDeviceInfo_Click);
             // 
             // lbl_serialNumber
             // 
@@ -181,14 +182,14 @@
             this.lbl_producerName.TabIndex = 37;
             this.lbl_producerName.Text = "Výrobce:";
             // 
-            // lbl_item
+            // lbl_device
             // 
-            this.lbl_item.AutoSize = true;
-            this.lbl_item.Location = new System.Drawing.Point(515, 178);
-            this.lbl_item.Name = "lbl_item";
-            this.lbl_item.Size = new System.Drawing.Size(48, 15);
-            this.lbl_item.TabIndex = 36;
-            this.lbl_item.Text = "Zařízení";
+            this.lbl_device.AutoSize = true;
+            this.lbl_device.Location = new System.Drawing.Point(515, 178);
+            this.lbl_device.Name = "lbl_device";
+            this.lbl_device.Size = new System.Drawing.Size(48, 15);
+            this.lbl_device.TabIndex = 36;
+            this.lbl_device.Text = "Zařízení";
             // 
             // btn_editCustomerInfo
             // 
@@ -296,11 +297,11 @@
             this.Controls.Add(this.txtBox_name);
             this.Controls.Add(this.txtBox_dateOfMeasurement);
             this.Controls.Add(this.txtBox_protocolNumber);
-            this.Controls.Add(this.btn_editItemInfo);
+            this.Controls.Add(this.btn_editDeviceInfo);
             this.Controls.Add(this.lbl_serialNumber);
             this.Controls.Add(this.lbl_modelName);
             this.Controls.Add(this.lbl_producerName);
-            this.Controls.Add(this.lbl_item);
+            this.Controls.Add(this.lbl_device);
             this.Controls.Add(this.btn_editCustomerInfo);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.lbl_postNumber);
@@ -331,11 +332,11 @@
         private TextBox txtBox_name;
         private TextBox txtBox_dateOfMeasurement;
         private TextBox txtBox_protocolNumber;
-        private Button btn_editItemInfo;
+        private Button btn_editDeviceInfo;
         private Label lbl_serialNumber;
         private Label lbl_modelName;
         private Label lbl_producerName;
-        private Label lbl_item;
+        private Label lbl_device;
         private Button btn_editCustomerInfo;
         private Label lbl_id;
         private Label lbl_postNumber;

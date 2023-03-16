@@ -10,20 +10,21 @@ using System.Windows.Forms;
 
 namespace ServisniProtokol
 {
-    public partial class BasicInfoForm : Form
+    public partial class DeviceInfoForm : Form
     {
-        public BasicInfoForm()
+        public DeviceInfoForm()
         {
-            InitializeComponent();    
+            InitializeComponent();
         }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            HomePageForm.instance.protocolNum.Text = this.txtBox_protocolNumber.Text;
-            HomePageForm.instance.date.Text = this.txtBox_dateOfMeasurement.Text;
+            HomePageForm.instance.maker.Text = this.txtBox_maker.Text;
+            HomePageForm.instance.modelName.Text = this.txtBox_modelName.Text;
+            HomePageForm.instance.serialNum.Text = this.txtBox_serialNum.Text;
+
             this.Close();
         }
-
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();

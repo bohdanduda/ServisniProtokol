@@ -4,6 +4,9 @@
     <Compile Update="BasicInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DeviceInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
