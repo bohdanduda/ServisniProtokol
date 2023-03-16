@@ -53,6 +53,15 @@
             this.lbl_dateOfMeasurement = new System.Windows.Forms.Label();
             this.lbl_protocolNumber = new System.Windows.Forms.Label();
             this.lbl_basicInfo = new System.Windows.Forms.Label();
+            this.dataGridView_measurement = new System.Windows.Forms.DataGridView();
+            this.Paremeter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MeasuredValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsValid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_measurement)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_measurement
@@ -283,11 +292,79 @@
             this.lbl_basicInfo.TabIndex = 26;
             this.lbl_basicInfo.Text = "Základní Informace";
             // 
+            // dataGridView_measurement
+            // 
+            this.dataGridView_measurement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_measurement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Paremeter,
+            this.MeasuredValue,
+            this.Value,
+            this.IsValid});
+            this.dataGridView_measurement.Location = new System.Drawing.Point(91, 429);
+            this.dataGridView_measurement.Name = "dataGridView_measurement";
+            this.dataGridView_measurement.RowTemplate.Height = 25;
+            this.dataGridView_measurement.Size = new System.Drawing.Size(623, 180);
+            this.dataGridView_measurement.TabIndex = 51;
+            // 
+            // Paremeter
+            // 
+            this.Paremeter.HeaderText = "Parametr";
+            this.Paremeter.Name = "Paremeter";
+            // 
+            // MeasuredValue
+            // 
+            this.MeasuredValue.HeaderText = "Naměřená Jednotka";
+            this.MeasuredValue.Name = "MeasuredValue";
+            // 
+            // Value
+            // 
+            this.Value.HeaderText = "Jednotka";
+            this.Value.Name = "Value";
+            // 
+            // IsValid
+            // 
+            this.IsValid.HeaderText = "Vyhovuje";
+            this.IsValid.Name = "IsValid";
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(477, 615);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 52;
+            this.btn_add.Text = "Přidat";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(558, 615);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_edit.TabIndex = 53;
+            this.btn_edit.Text = "Upravit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(639, 615);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 54;
+            this.btn_delete.Text = "Smazat";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 642);
+            this.ClientSize = new System.Drawing.Size(800, 698);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.dataGridView_measurement);
             this.Controls.Add(this.lbl_measurement);
             this.Controls.Add(this.txtBox_serialNumber);
             this.Controls.Add(this.txtBox_modelName);
@@ -316,6 +393,7 @@
             this.Name = "HomePageForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_measurement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,17 +426,13 @@
         private Label lbl_dateOfMeasurement;
         private Label lbl_protocolNumber;
         private Label lbl_basicInfo;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Parameter;
-        private DataGridViewTextBoxColumn MeasuredUnit;
-        private DataGridViewTextBoxColumn Unit;
-        private DataGridViewTextBoxColumn Valid;
-        private Button btn_delete;
-        private Button btn_edit;
+        private DataGridView dataGridView_measurement;
+        private DataGridViewTextBoxColumn Paremeter;
+        private DataGridViewTextBoxColumn MeasuredValue;
+        private DataGridViewTextBoxColumn Value;
+        private DataGridViewTextBoxColumn IsValid;
         private Button btn_add;
-        private Button btn_save;
-        private Button btn_import;
-        private Button btn_export;
-        private Button btn_preview;
+        private Button btn_edit;
+        private Button btn_delete;
     }
 }

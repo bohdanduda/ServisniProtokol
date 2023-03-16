@@ -16,6 +16,8 @@ namespace ServisniProtokol
         public TextBox address;
         public TextBox postNum;
         public TextBox id;
+        //datagrid
+        public DataGridView dataGrid;
 
         public HomePageForm()
         {
@@ -30,6 +32,7 @@ namespace ServisniProtokol
             address = this.txtBox_address;
             postNum = this.txtBox_postNumber;
             id = this.txtBox_id;
+            dataGrid = this.dataGridView_measurement;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,6 +56,27 @@ namespace ServisniProtokol
         {
             CustomerInfoForm customerInfoForm = new();
             customerInfoForm.ShowDialog();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            MeasureInfoForm measureInfoForm = new();
+            measureInfoForm.ShowDialog();
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            MeasureInfoForm measureInfoForm = new();
+            measureInfoForm.LoadData(true);
+            measureInfoForm.ShowDialog();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView_measurement.SelectedRows)
+            {
+                dataGridView_measurement.Rows.RemoveAt(row.Index);
+            }
         }
     }
 }
