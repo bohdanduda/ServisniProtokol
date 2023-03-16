@@ -28,6 +28,7 @@ namespace ServisniProtokol
             serialNum = this.txtBox_serialNumber;
             name = this.txtBox_name;
             address = this.txtBox_address;
+            postNum = this.txtBox_postNumber;
             id = this.txtBox_id;
         }
 
@@ -46,6 +47,12 @@ namespace ServisniProtokol
         {
             DeviceInfoForm deviceInfoForm = new();
             deviceInfoForm.ShowDialog();
+        }
+
+        private void btn_editCustomerInfo_Click(object sender, EventArgs e)
+        {
+            CustomerInfoForm customerInfoForm = new();
+            customerInfoForm.ShowDialog();
         }
     }
 }

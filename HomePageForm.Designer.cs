@@ -199,6 +199,7 @@
             this.btn_editCustomerInfo.TabIndex = 35;
             this.btn_editCustomerInfo.Text = "Upravit";
             this.btn_editCustomerInfo.UseVisualStyleBackColor = true;
+            this.btn_editCustomerInfo.Click += new System.EventHandler(this.btn_editCustomerInfo_Click);
             // 
             // lbl_id
             // 
