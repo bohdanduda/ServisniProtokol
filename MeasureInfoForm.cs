@@ -17,6 +17,8 @@ namespace ServisniProtokol
         private bool editing;
         public MeasureInfoForm()
         {
+            
+
             InitializeComponent();
             instance = this;
 

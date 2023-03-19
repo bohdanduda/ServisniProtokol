@@ -20,7 +20,7 @@ namespace ServisniProtokol
         private void btn_save_Click(object sender, EventArgs e)
         {
             HomePageForm.instance.protocolNum.Text = this.txtBox_protocolNumber.Text;
-            HomePageForm.instance.date.Text = this.txtBox_dateOfMeasurement.Text;
+            HomePageForm.instance.date.Text = this.dateTimePicker.Value.ToString();
             this.Close();
         }
 

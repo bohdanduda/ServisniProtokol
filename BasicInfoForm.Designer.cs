@@ -33,7 +33,7 @@
             this.txtBox_protocolNumber = new System.Windows.Forms.TextBox();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.txtBox_dateOfMeasurement = new System.Windows.Forms.MaskedTextBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lbl_protocolNumber
@@ -81,21 +81,19 @@
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
-            // txtBox_dateOfMeasurement
+            // dateTimePicker
             // 
-            this.txtBox_dateOfMeasurement.Location = new System.Drawing.Point(109, 35);
-            this.txtBox_dateOfMeasurement.Mask = "00/00/0000";
-            this.txtBox_dateOfMeasurement.Name = "txtBox_dateOfMeasurement";
-            this.txtBox_dateOfMeasurement.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_dateOfMeasurement.TabIndex = 6;
-            this.txtBox_dateOfMeasurement.ValidatingType = typeof(System.DateTime);
+            this.dateTimePicker.Location = new System.Drawing.Point(109, 35);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(226, 23);
+            this.dateTimePicker.TabIndex = 6;
             // 
             // BasicInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 108);
-            this.Controls.Add(this.txtBox_dateOfMeasurement);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.txtBox_protocolNumber);
@@ -115,6 +113,6 @@
         private TextBox txtBox_protocolNumber;
         private Button btn_save;
         private Button btn_cancel;
-        private MaskedTextBox txtBox_dateOfMeasurement;
+        private DateTimePicker dateTimePicker;
     }
 }
