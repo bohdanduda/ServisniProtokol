@@ -78,5 +78,61 @@ namespace ServisniProtokol
                 dataGridView_measurement.Rows.RemoveAt(row.Index);
             }
         }
+
+        private void btn_preview_Click(object sender, EventArgs e)
+        {
+            PreviewForm previewForm = new();
+            previewForm.ShowDialog();
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowser = new();
+            folderBrowser.ShowDialog();
+            StreamWriter streamWriter = new StreamWriter($"{folderBrowser.SelectedPath}\\protocol.txt");
+
+            streamWriter.WriteLine(txtBox_protocolNumber.Text);
+            streamWriter.WriteLine(txtBox_dateOfMeasurement.Text);
+            streamWriter.WriteLine(txtBox_name.Text);
+            streamWriter.WriteLine(txtBox_address.Text);
+            streamWriter.WriteLine(txtBox_postNumber.Text);
+            streamWriter.WriteLine(txtBox_id.Text);
+            streamWriter.WriteLine(txtBox_producerName.Text);
+            streamWriter.WriteLine(txtBox_modelName.Text);
+            streamWriter.WriteLine(txtBox_serialNumber.Text);
+
+            streamWriter.Close();
+            MessageBox.Show("Protokol Uložen!");
+        }
+
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new();
+            fileDialog.ShowDialog();
+            StreamReader streamReader = new(fileDialog.FileName);
+            List<string> data = new();
+
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    data.Add(streamReader.ReadLine());
+            //}
+            
+            while (!streamReader.EndOfStream)
+            {
+                data.Add(streamReader.ReadLine());
+            }
+            
+            this.txtBox_protocolNumber.Text = data[0];
+            this.txtBox_dateOfMeasurement.Text = data[1];
+            this.txtBox_name.Text = data[2];
+            this.txtBox_address.Text = data[3];
+            this.txtBox_postNumber.Text = data[4];
+            this.txtBox_id.Text = data[5];
+            this.txtBox_producerName.Text = data[6];
+            this.txtBox_modelName.Text = data[7];
+            this.txtBox_serialNumber.Text = data[8];
+
+            MessageBox.Show("Protokol Naèten!");
+        }
     }
 }

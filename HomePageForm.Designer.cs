@@ -61,6 +61,9 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_preview = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_measurement)).BeginInit();
             this.SuspendLayout();
             // 
@@ -356,11 +359,44 @@
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
+            // btn_preview
+            // 
+            this.btn_preview.Location = new System.Drawing.Point(713, 663);
+            this.btn_preview.Name = "btn_preview";
+            this.btn_preview.Size = new System.Drawing.Size(75, 23);
+            this.btn_preview.TabIndex = 55;
+            this.btn_preview.Text = "Náhled";
+            this.btn_preview.UseVisualStyleBackColor = true;
+            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(12, 663);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.TabIndex = 56;
+            this.btn_save.Text = "Uložit";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_load
+            // 
+            this.btn_load.Location = new System.Drawing.Point(102, 663);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(75, 23);
+            this.btn_load.TabIndex = 57;
+            this.btn_load.Text = "Načíst";
+            this.btn_load.UseVisualStyleBackColor = true;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 698);
+            this.Controls.Add(this.btn_load);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_preview);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_add);
@@ -434,5 +470,8 @@
         private Button btn_add;
         private Button btn_edit;
         private Button btn_delete;
+        private Button btn_preview;
+        private Button btn_save;
+        private Button btn_load;
     }
 }
