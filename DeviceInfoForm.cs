@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
+
+using System.Text.RegularExpressions;
 
 namespace ServisniProtokol
 {
     public partial class DeviceInfoForm : Form
     {
+        private bool isValid = false;
+
         public DeviceInfoForm()
         {
             InitializeComponent();
@@ -19,15 +15,48 @@ namespace ServisniProtokol
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            HomePageForm.instance.maker.Text = this.txtBox_maker.Text;
-            HomePageForm.instance.modelName.Text = this.txtBox_modelName.Text;
-            HomePageForm.instance.serialNum.Text = this.txtBox_serialNum.Text;
+            this.ValidateData(this.txtBox_producer.Text, this.txtBox_model.Text, this.txtBox_serialNum.Text);
 
-            this.Close();
+            if (this.isValid)
+            {
+                HomePageForm.instance.producer.Text = this.txtBox_producer.Text;
+                HomePageForm.instance.model.Text = this.txtBox_model.Text;
+                HomePageForm.instance.serialNum.Text = this.txtBox_serialNum.Text;
+
+                this.Close();
+            }
         }
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ValidateData(string producer, string model, string serialNum)
+        {
+            this.errorProvider1.Clear();
+
+            Regex regex = new("^[a-zA-Z-0-9(). -]+$");
+
+            if (!regex.IsMatch(producer))
+            {
+                this.errorProvider1.SetError(this.txtBox_producer, "Zadejte validní název výrobce!");
+                return;
+            }
+
+            regex = new("^[a-zA-Z0-9-]+$");
+            if (!regex.IsMatch(model))
+            {
+                this.errorProvider1.SetError(this.txtBox_model, "Zadejte validní číslo modelu!");
+                return;
+            }
+            
+            if (!regex.IsMatch(serialNum))
+            {
+                this.errorProvider1.SetError(this.txtBox_serialNum, "Zadejte validní sériové číslo!");
+                return;
+            }
+
+            this.isValid = true;
         }
     }
 }
