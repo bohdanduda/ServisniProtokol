@@ -60,12 +60,20 @@ namespace ServisniProtokol
 
         private void button_addDeviceInfo_Click(object sender, EventArgs e)
         {
-
+            DeviceInfoForm deviceInfoForm = new();
+            deviceInfoForm.ShowDialog();
         }
 
         private void btn_editDeviceInfo_Click(object sender, EventArgs e)
         {
+            if (this.txtBox_producerName.Text == "?")
+            {
+                MessageBox.Show("Nejprve vyplòte data, abyste je mohli upravovat.");
+                return;
+            }
+
             DeviceInfoForm deviceInfoForm = new();
+            deviceInfoForm.LoadData(true);
             deviceInfoForm.ShowDialog();
         }
 
