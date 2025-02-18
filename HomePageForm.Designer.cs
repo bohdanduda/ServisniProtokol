@@ -183,7 +183,7 @@
             btn_editDeviceInfo.Location = new Point(166, 157);
             btn_editDeviceInfo.Name = "btn_editDeviceInfo";
             btn_editDeviceInfo.Size = new Size(75, 23);
-            btn_editDeviceInfo.TabIndex = 40;
+            btn_editDeviceInfo.TabIndex = 6;
             btn_editDeviceInfo.Text = "Upravit";
             btn_editDeviceInfo.UseVisualStyleBackColor = true;
             btn_editDeviceInfo.Click += btn_editDeviceInfo_Click;
@@ -224,7 +224,7 @@
             btn_editCustomerInfo.Location = new Point(149, 157);
             btn_editCustomerInfo.Name = "btn_editCustomerInfo";
             btn_editCustomerInfo.Size = new Size(75, 23);
-            btn_editCustomerInfo.TabIndex = 35;
+            btn_editCustomerInfo.TabIndex = 4;
             btn_editCustomerInfo.Text = "Upravit";
             btn_editCustomerInfo.UseVisualStyleBackColor = true;
             btn_editCustomerInfo.Click += btn_editCustomerInfo_Click;
@@ -275,7 +275,7 @@
             btn_editBasicInfo.Location = new Point(353, 64);
             btn_editBasicInfo.Name = "btn_editBasicInfo";
             btn_editBasicInfo.Size = new Size(75, 23);
-            btn_editBasicInfo.TabIndex = 29;
+            btn_editBasicInfo.TabIndex = 2;
             btn_editBasicInfo.Text = "Upravit";
             btn_editBasicInfo.UseVisualStyleBackColor = true;
             btn_editBasicInfo.Click += btn_editBasicInfo_Click;
@@ -335,7 +335,7 @@
             btn_add.Location = new Point(135, 229);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(75, 22);
-            btn_add.TabIndex = 52;
+            btn_add.TabIndex = 7;
             btn_add.Text = "Přidat";
             btn_add.UseVisualStyleBackColor = true;
             btn_add.Click += btn_add_Click;
@@ -346,7 +346,7 @@
             btn_edit.Location = new Point(216, 228);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(75, 23);
-            btn_edit.TabIndex = 53;
+            btn_edit.TabIndex = 8;
             btn_edit.Text = "Upravit";
             btn_edit.UseVisualStyleBackColor = true;
             btn_edit.Click += btn_edit_Click;
@@ -357,7 +357,7 @@
             btn_delete.Location = new Point(297, 229);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(75, 22);
-            btn_delete.TabIndex = 54;
+            btn_delete.TabIndex = 9;
             btn_delete.Text = "Smazat";
             btn_delete.UseVisualStyleBackColor = true;
             btn_delete.Click += btn_delete_Click;
@@ -367,7 +367,7 @@
             btn_preview.Location = new Point(713, 663);
             btn_preview.Name = "btn_preview";
             btn_preview.Size = new Size(75, 23);
-            btn_preview.TabIndex = 55;
+            btn_preview.TabIndex = 13;
             btn_preview.Text = "Náhled";
             btn_preview.UseVisualStyleBackColor = true;
             btn_preview.Click += btn_preview_Click;
@@ -377,7 +377,7 @@
             btn_save.Location = new Point(10, 663);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(75, 23);
-            btn_save.TabIndex = 56;
+            btn_save.TabIndex = 10;
             btn_save.Text = "Uložit";
             btn_save.UseVisualStyleBackColor = true;
             btn_save.Click += btn_save_Click;
@@ -387,7 +387,7 @@
             btn_load.Location = new Point(91, 663);
             btn_load.Name = "btn_load";
             btn_load.Size = new Size(75, 23);
-            btn_load.TabIndex = 57;
+            btn_load.TabIndex = 11;
             btn_load.Text = "Načíst";
             btn_load.UseVisualStyleBackColor = true;
             btn_load.Click += btn_load_Click;
@@ -402,7 +402,7 @@
             btn_addBasicInfo.Location = new Point(353, 34);
             btn_addBasicInfo.Name = "btn_addBasicInfo";
             btn_addBasicInfo.Size = new Size(75, 23);
-            btn_addBasicInfo.TabIndex = 58;
+            btn_addBasicInfo.TabIndex = 1;
             btn_addBasicInfo.Text = "Přidat";
             btn_addBasicInfo.UseVisualStyleBackColor = true;
             btn_addBasicInfo.Click += btn_addBasicInfo_Click;
@@ -429,7 +429,7 @@
             btn_addCustomerInfo.Location = new Point(68, 157);
             btn_addCustomerInfo.Name = "btn_addCustomerInfo";
             btn_addCustomerInfo.Size = new Size(75, 23);
-            btn_addCustomerInfo.TabIndex = 60;
+            btn_addCustomerInfo.TabIndex = 3;
             btn_addCustomerInfo.Text = "Přidat";
             btn_addCustomerInfo.UseVisualStyleBackColor = true;
             btn_addCustomerInfo.Click += btn_addCustomerInfo_Click;
@@ -460,7 +460,7 @@
             button_addDeviceInfo.Location = new Point(85, 157);
             button_addDeviceInfo.Name = "button_addDeviceInfo";
             button_addDeviceInfo.Size = new Size(75, 23);
-            button_addDeviceInfo.TabIndex = 62;
+            button_addDeviceInfo.TabIndex = 5;
             button_addDeviceInfo.Text = "Přidat";
             button_addDeviceInfo.UseVisualStyleBackColor = true;
             button_addDeviceInfo.Click += button_addDeviceInfo_Click;
@@ -502,7 +502,7 @@
             btn_help.Location = new Point(632, 663);
             btn_help.Name = "btn_help";
             btn_help.Size = new Size(75, 23);
-            btn_help.TabIndex = 65;
+            btn_help.TabIndex = 12;
             btn_help.Text = "Nápověda";
             btn_help.UseVisualStyleBackColor = true;
             btn_help.Click += btn_help_Click;
