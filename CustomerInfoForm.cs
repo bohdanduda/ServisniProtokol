@@ -5,10 +5,25 @@ namespace ServisniProtokol
 {
     public partial class CustomerInfoForm : Form
     {
+        private const string FORM_TITLE = "Editace zákaznických informací";
         private bool isValid = false;
+
         public CustomerInfoForm()
         {
             InitializeComponent();
+        }
+
+        public void LoadData(bool editing)
+        {
+            if (editing)
+            {
+                this.groupBox_customerInfo.Text = FORM_TITLE;
+            }
+
+            this.txtBox_name.Text = HomePageForm.instance.name.Text;
+            this.txtBox_address.Text = HomePageForm.instance.address.Text;
+            this.txtBox_postNum.Text = HomePageForm.instance.postNum.Text;
+            this.txtBox_id.Text = HomePageForm.instance.id.Text;
         }
 
         private void btn_save_Click(object sender, EventArgs e)

@@ -71,12 +71,20 @@ namespace ServisniProtokol
 
         private void btn_addCustomerInfo_Click(object sender, EventArgs e)
         {
-
+            CustomerInfoForm customerInfoForm = new();
+            customerInfoForm.ShowDialog();
         }
 
         private void btn_editCustomerInfo_Click(object sender, EventArgs e)
         {
+            if (this.txtBox_name.Text == "?")
+            {
+                MessageBox.Show("Nejprve vyplòte data, abyste je mohli upravovat.");
+                return;
+            }
+
             CustomerInfoForm customerInfoForm = new();
+            customerInfoForm.LoadData(true);
             customerInfoForm.ShowDialog();
         }
 

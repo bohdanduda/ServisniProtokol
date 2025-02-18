@@ -40,20 +40,24 @@
             txtBox_id = new TextBox();
             lbl_id = new Label();
             errorProvider1 = new ErrorProvider(components);
+            groupBox_customerInfo = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            groupBox_customerInfo.SuspendLayout();
             SuspendLayout();
             // 
             // txtBox_postNum
             // 
-            txtBox_postNum.Location = new Point(64, 67);
+            txtBox_postNum.Font = new Font("Segoe UI", 9F);
+            txtBox_postNum.Location = new Point(101, 102);
             txtBox_postNum.Name = "txtBox_postNum";
             txtBox_postNum.Size = new Size(226, 23);
-            txtBox_postNum.TabIndex = 22;
+            txtBox_postNum.TabIndex = 3;
             // 
             // lbl_postNumber
             // 
             lbl_postNumber.AutoSize = true;
-            lbl_postNumber.Location = new Point(22, 70);
+            lbl_postNumber.Font = new Font("Segoe UI", 9F);
+            lbl_postNumber.Location = new Point(59, 105);
             lbl_postNumber.Name = "lbl_postNumber";
             lbl_postNumber.Size = new Size(31, 15);
             lbl_postNumber.TabIndex = 21;
@@ -61,42 +65,47 @@
             // 
             // txtBox_address
             // 
-            txtBox_address.Location = new Point(64, 38);
+            txtBox_address.Font = new Font("Segoe UI", 9F);
+            txtBox_address.Location = new Point(101, 73);
             txtBox_address.Name = "txtBox_address";
             txtBox_address.Size = new Size(226, 23);
-            txtBox_address.TabIndex = 20;
+            txtBox_address.TabIndex = 2;
             // 
             // btn_cancel
             // 
-            btn_cancel.Location = new Point(215, 147);
+            btn_cancel.Font = new Font("Segoe UI", 9F);
+            btn_cancel.Location = new Point(190, 182);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(75, 23);
-            btn_cancel.TabIndex = 19;
-            btn_cancel.Text = "STORNO";
+            btn_cancel.TabIndex = 6;
+            btn_cancel.Text = "Storno";
             btn_cancel.UseVisualStyleBackColor = true;
             btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
-            btn_save.Location = new Point(134, 147);
+            btn_save.Font = new Font("Segoe UI", 9F);
+            btn_save.Location = new Point(109, 182);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(75, 23);
-            btn_save.TabIndex = 18;
-            btn_save.Text = "OK";
+            btn_save.TabIndex = 5;
+            btn_save.Text = "Uložit";
             btn_save.UseVisualStyleBackColor = true;
             btn_save.Click += btn_save_Click;
             // 
             // txtBox_name
             // 
-            txtBox_name.Location = new Point(64, 9);
+            txtBox_name.Font = new Font("Segoe UI", 9F);
+            txtBox_name.Location = new Point(101, 44);
             txtBox_name.Name = "txtBox_name";
             txtBox_name.Size = new Size(226, 23);
-            txtBox_name.TabIndex = 17;
+            txtBox_name.TabIndex = 1;
             // 
             // lbl_address
             // 
             lbl_address.AutoSize = true;
-            lbl_address.Location = new Point(9, 41);
+            lbl_address.Font = new Font("Segoe UI", 9F);
+            lbl_address.Location = new Point(46, 76);
             lbl_address.Name = "lbl_address";
             lbl_address.Size = new Size(46, 15);
             lbl_address.TabIndex = 16;
@@ -105,7 +114,8 @@
             // lbl_name
             // 
             lbl_name.AutoSize = true;
-            lbl_name.Location = new Point(11, 12);
+            lbl_name.Font = new Font("Segoe UI", 9F);
+            lbl_name.Location = new Point(48, 47);
             lbl_name.Name = "lbl_name";
             lbl_name.Size = new Size(42, 15);
             lbl_name.TabIndex = 15;
@@ -113,15 +123,17 @@
             // 
             // txtBox_id
             // 
-            txtBox_id.Location = new Point(64, 96);
+            txtBox_id.Font = new Font("Segoe UI", 9F);
+            txtBox_id.Location = new Point(101, 131);
             txtBox_id.Name = "txtBox_id";
             txtBox_id.Size = new Size(226, 23);
-            txtBox_id.TabIndex = 24;
+            txtBox_id.TabIndex = 4;
             // 
             // lbl_id
             // 
             lbl_id.AutoSize = true;
-            lbl_id.Location = new Point(32, 99);
+            lbl_id.Font = new Font("Segoe UI", 9F);
+            lbl_id.Location = new Point(69, 134);
             lbl_id.Name = "lbl_id";
             lbl_id.Size = new Size(21, 15);
             lbl_id.TabIndex = 23;
@@ -131,26 +143,39 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // groupBox_customerInfo
+            // 
+            groupBox_customerInfo.Controls.Add(txtBox_id);
+            groupBox_customerInfo.Controls.Add(lbl_id);
+            groupBox_customerInfo.Controls.Add(txtBox_postNum);
+            groupBox_customerInfo.Controls.Add(lbl_postNumber);
+            groupBox_customerInfo.Controls.Add(txtBox_address);
+            groupBox_customerInfo.Controls.Add(btn_cancel);
+            groupBox_customerInfo.Controls.Add(btn_save);
+            groupBox_customerInfo.Controls.Add(txtBox_name);
+            groupBox_customerInfo.Controls.Add(lbl_address);
+            groupBox_customerInfo.Controls.Add(lbl_name);
+            groupBox_customerInfo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            groupBox_customerInfo.Location = new Point(12, 21);
+            groupBox_customerInfo.Name = "groupBox_customerInfo";
+            groupBox_customerInfo.Size = new Size(383, 216);
+            groupBox_customerInfo.TabIndex = 25;
+            groupBox_customerInfo.TabStop = false;
+            groupBox_customerInfo.Text = "Přidání zákaznických informací";
+            // 
             // CustomerInfoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 181);
-            Controls.Add(txtBox_id);
-            Controls.Add(lbl_id);
-            Controls.Add(txtBox_postNum);
-            Controls.Add(lbl_postNumber);
-            Controls.Add(txtBox_address);
-            Controls.Add(btn_cancel);
-            Controls.Add(btn_save);
-            Controls.Add(txtBox_name);
-            Controls.Add(lbl_address);
-            Controls.Add(lbl_name);
+            ClientSize = new Size(414, 256);
+            Controls.Add(groupBox_customerInfo);
             Name = "CustomerInfoForm";
-            Text = "CustomerInfoForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Zákaznické informace";
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            groupBox_customerInfo.ResumeLayout(false);
+            groupBox_customerInfo.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
@@ -167,5 +192,6 @@
         private TextBox txtBox_id;
         private Label lbl_id;
         private ErrorProvider errorProvider1;
+        private GroupBox groupBox_customerInfo;
     }
 }
