@@ -38,7 +38,7 @@ namespace ServisniProtokol
             graphics.DrawString($"IČ: {HomePageForm.instance.id.Text}", Font, Brushes.Black, 30, 160);
 
             graphics.DrawString("Zařízení", Font, Brushes.Black, 460,80);
-            graphics.DrawString($"Výrobce: {HomePageForm.instance.maker.Text}", Font, Brushes.Black, 460, 100);
+            graphics.DrawString($"Výrobce: {HomePageForm.instance.producer.Text}", Font, Brushes.Black, 460, 100);
             graphics.DrawString($"Adresa: {HomePageForm.instance.modelName.Text}", Font, Brushes.Black, 460, 120);
             graphics.DrawString($"PSČ: {HomePageForm.instance.serialNum.Text}", Font, Brushes.Black, 460, 140);
 

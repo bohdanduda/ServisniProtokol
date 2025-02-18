@@ -8,7 +8,7 @@ namespace ServisniProtokol
         public TextBox protocolNum;
         public TextBox date;
         //textboxs for device info
-        public TextBox maker;
+        public TextBox producer;
         public TextBox modelName;
         public TextBox serialNum;
         //textboxs for customer info
@@ -25,7 +25,7 @@ namespace ServisniProtokol
             instance = this;
             protocolNum = this.txtBox_protocolNumber;
             date = this.txtBox_dateOfMeasurement;
-            maker = this.txtBox_producerName;
+            producer = this.txtBox_producerName;
             modelName = this.txtBox_modelName;
             serialNum = this.txtBox_serialNumber;
             name = this.txtBox_name;

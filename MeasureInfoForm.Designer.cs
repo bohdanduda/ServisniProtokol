@@ -28,123 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_isValid = new System.Windows.Forms.Label();
-            this.txtBox_unit = new System.Windows.Forms.TextBox();
-            this.lbl_unit = new System.Windows.Forms.Label();
-            this.txtBox_measuredUnit = new System.Windows.Forms.TextBox();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.txtBox_paramName = new System.Windows.Forms.TextBox();
-            this.lbl_measuredUnit = new System.Windows.Forms.Label();
-            this.lbl_paramName = new System.Windows.Forms.Label();
-            this.chckBox_isValid = new System.Windows.Forms.CheckBox();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            lbl_isValid = new Label();
+            txtBox_unit = new TextBox();
+            lbl_unit = new Label();
+            txtBox_measuredUnit = new TextBox();
+            btn_cancel = new Button();
+            btn_save = new Button();
+            txtBox_paramName = new TextBox();
+            lbl_measuredUnit = new Label();
+            lbl_paramName = new Label();
+            chckBox_isValid = new CheckBox();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // lbl_isValid
             // 
-            this.lbl_isValid.AutoSize = true;
-            this.lbl_isValid.Location = new System.Drawing.Point(58, 102);
-            this.lbl_isValid.Name = "lbl_isValid";
-            this.lbl_isValid.Size = new System.Drawing.Size(59, 15);
-            this.lbl_isValid.TabIndex = 33;
-            this.lbl_isValid.Text = "Vyhovuje:";
+            lbl_isValid.AutoSize = true;
+            lbl_isValid.Location = new Point(58, 102);
+            lbl_isValid.Name = "lbl_isValid";
+            lbl_isValid.Size = new Size(59, 15);
+            lbl_isValid.TabIndex = 33;
+            lbl_isValid.Text = "Vyhovuje:";
             // 
             // txtBox_unit
             // 
-            this.txtBox_unit.Location = new System.Drawing.Point(121, 70);
-            this.txtBox_unit.Name = "txtBox_unit";
-            this.txtBox_unit.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_unit.TabIndex = 32;
+            txtBox_unit.Location = new Point(121, 70);
+            txtBox_unit.Name = "txtBox_unit";
+            txtBox_unit.Size = new Size(226, 23);
+            txtBox_unit.TabIndex = 32;
             // 
             // lbl_unit
             // 
-            this.lbl_unit.AutoSize = true;
-            this.lbl_unit.Location = new System.Drawing.Point(58, 73);
-            this.lbl_unit.Name = "lbl_unit";
-            this.lbl_unit.Size = new System.Drawing.Size(57, 15);
-            this.lbl_unit.TabIndex = 31;
-            this.lbl_unit.Text = "Jednotka:";
+            lbl_unit.AutoSize = true;
+            lbl_unit.Location = new Point(58, 73);
+            lbl_unit.Name = "lbl_unit";
+            lbl_unit.Size = new Size(57, 15);
+            lbl_unit.TabIndex = 31;
+            lbl_unit.Text = "Jednotka:";
             // 
             // txtBox_measuredUnit
             // 
-            this.txtBox_measuredUnit.Location = new System.Drawing.Point(121, 41);
-            this.txtBox_measuredUnit.Name = "txtBox_measuredUnit";
-            this.txtBox_measuredUnit.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_measuredUnit.TabIndex = 30;
+            txtBox_measuredUnit.Location = new Point(121, 41);
+            txtBox_measuredUnit.Name = "txtBox_measuredUnit";
+            txtBox_measuredUnit.Size = new Size(226, 23);
+            txtBox_measuredUnit.TabIndex = 30;
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(272, 146);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel.TabIndex = 29;
-            this.btn_cancel.Text = "STORNO";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            btn_cancel.Location = new Point(272, 146);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(75, 23);
+            btn_cancel.TabIndex = 29;
+            btn_cancel.Text = "STORNO";
+            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(191, 146);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 28;
-            this.btn_save.Text = "OK";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            btn_save.Location = new Point(191, 146);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(75, 23);
+            btn_save.TabIndex = 28;
+            btn_save.Text = "OK";
+            btn_save.UseVisualStyleBackColor = true;
+            btn_save.Click += btn_save_Click;
             // 
             // txtBox_paramName
             // 
-            this.txtBox_paramName.Location = new System.Drawing.Point(121, 12);
-            this.txtBox_paramName.Name = "txtBox_paramName";
-            this.txtBox_paramName.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_paramName.TabIndex = 27;
+            txtBox_paramName.Location = new Point(121, 12);
+            txtBox_paramName.Name = "txtBox_paramName";
+            txtBox_paramName.Size = new Size(226, 23);
+            txtBox_paramName.TabIndex = 27;
             // 
             // lbl_measuredUnit
             // 
-            this.lbl_measuredUnit.AutoSize = true;
-            this.lbl_measuredUnit.Location = new System.Drawing.Point(0, 44);
-            this.lbl_measuredUnit.Name = "lbl_measuredUnit";
-            this.lbl_measuredUnit.Size = new System.Drawing.Size(115, 15);
-            this.lbl_measuredUnit.TabIndex = 26;
-            this.lbl_measuredUnit.Text = "Naměřená Jednotka:";
+            lbl_measuredUnit.AutoSize = true;
+            lbl_measuredUnit.Location = new Point(0, 44);
+            lbl_measuredUnit.Name = "lbl_measuredUnit";
+            lbl_measuredUnit.Size = new Size(115, 15);
+            lbl_measuredUnit.TabIndex = 26;
+            lbl_measuredUnit.Text = "Naměřená Jednotka:";
             // 
             // lbl_paramName
             // 
-            this.lbl_paramName.AutoSize = true;
-            this.lbl_paramName.Location = new System.Drawing.Point(15, 15);
-            this.lbl_paramName.Name = "lbl_paramName";
-            this.lbl_paramName.Size = new System.Drawing.Size(100, 15);
-            this.lbl_paramName.TabIndex = 25;
-            this.lbl_paramName.Text = "Název Parametru:";
+            lbl_paramName.AutoSize = true;
+            lbl_paramName.Location = new Point(15, 15);
+            lbl_paramName.Name = "lbl_paramName";
+            lbl_paramName.Size = new Size(100, 15);
+            lbl_paramName.TabIndex = 25;
+            lbl_paramName.Text = "Název Parametru:";
             // 
             // chckBox_isValid
             // 
-            this.chckBox_isValid.AutoSize = true;
-            this.chckBox_isValid.Location = new System.Drawing.Point(123, 103);
-            this.chckBox_isValid.Name = "chckBox_isValid";
-            this.chckBox_isValid.Size = new System.Drawing.Size(15, 14);
-            this.chckBox_isValid.TabIndex = 34;
-            this.chckBox_isValid.UseVisualStyleBackColor = true;
+            chckBox_isValid.AutoSize = true;
+            chckBox_isValid.Location = new Point(123, 103);
+            chckBox_isValid.Name = "chckBox_isValid";
+            chckBox_isValid.Size = new Size(15, 14);
+            chckBox_isValid.TabIndex = 34;
+            chckBox_isValid.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // MeasureInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 187);
-            this.Controls.Add(this.chckBox_isValid);
-            this.Controls.Add(this.lbl_isValid);
-            this.Controls.Add(this.txtBox_unit);
-            this.Controls.Add(this.lbl_unit);
-            this.Controls.Add(this.txtBox_measuredUnit);
-            this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.txtBox_paramName);
-            this.Controls.Add(this.lbl_measuredUnit);
-            this.Controls.Add(this.lbl_paramName);
-            this.Name = "MeasureInfoForm";
-            this.Text = "MeasureInfoForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(364, 187);
+            Controls.Add(chckBox_isValid);
+            Controls.Add(lbl_isValid);
+            Controls.Add(txtBox_unit);
+            Controls.Add(lbl_unit);
+            Controls.Add(txtBox_measuredUnit);
+            Controls.Add(btn_cancel);
+            Controls.Add(btn_save);
+            Controls.Add(txtBox_paramName);
+            Controls.Add(lbl_measuredUnit);
+            Controls.Add(lbl_paramName);
+            Name = "MeasureInfoForm";
+            Text = "MeasureInfoForm";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -160,5 +168,6 @@
         private Label lbl_measuredUnit;
         private Label lbl_paramName;
         private CheckBox chckBox_isValid;
+        private ErrorProvider errorProvider1;
     }
 }

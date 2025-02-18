@@ -28,40 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox_preview = new System.Windows.Forms.PictureBox();
-            this.btn_close = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_preview)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            pictureBox_preview = new PictureBox();
+            btn_close = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)pictureBox_preview).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox_preview
             // 
-            this.pictureBox_preview.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox_preview.Name = "pictureBox_preview";
-            this.pictureBox_preview.Size = new System.Drawing.Size(776, 407);
-            this.pictureBox_preview.TabIndex = 0;
-            this.pictureBox_preview.TabStop = false;
-            this.pictureBox_preview.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_preview_Paint);
+            pictureBox_preview.Location = new Point(12, 12);
+            pictureBox_preview.Name = "pictureBox_preview";
+            pictureBox_preview.Size = new Size(776, 407);
+            pictureBox_preview.TabIndex = 0;
+            pictureBox_preview.TabStop = false;
+            pictureBox_preview.Paint += pictureBox_preview_Paint;
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(713, 425);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 23);
-            this.btn_close.TabIndex = 1;
-            this.btn_close.Text = "Zavřít";
-            this.btn_close.UseVisualStyleBackColor = true;
+            btn_close.Location = new Point(713, 425);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(75, 23);
+            btn_close.TabIndex = 1;
+            btn_close.Text = "Zavřít";
+            btn_close.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // PreviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_close);
-            this.Controls.Add(this.pictureBox_preview);
-            this.Name = "PreviewForm";
-            this.Text = "Náhled Tisku";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_preview)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btn_close);
+            Controls.Add(pictureBox_preview);
+            Name = "PreviewForm";
+            Text = "Náhled Tisku";
+            ((System.ComponentModel.ISupportInitialize)pictureBox_preview).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
 
         }
 
@@ -69,5 +77,6 @@
 
         private PictureBox pictureBox_preview;
         private Button btn_close;
+        private ErrorProvider errorProvider1;
     }
 }

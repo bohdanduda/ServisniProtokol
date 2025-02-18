@@ -15,12 +15,12 @@ namespace ServisniProtokol
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            this.ValidateData(this.txtBox_producer.Text, this.txtBox_model.Text, this.txtBox_serialNum.Text);
+            this.ValidateData(this.txtBox_producer.Text, this.txtBox_modelName.Text, this.txtBox_serialNum.Text);
 
             if (this.isValid)
             {
                 HomePageForm.instance.producer.Text = this.txtBox_producer.Text;
-                HomePageForm.instance.model.Text = this.txtBox_model.Text;
+                HomePageForm.instance.modelName.Text = this.txtBox_modelName.Text;
                 HomePageForm.instance.serialNum.Text = this.txtBox_serialNum.Text;
 
                 this.Close();
@@ -46,7 +46,7 @@ namespace ServisniProtokol
             regex = new("^[a-zA-Z0-9-]+$");
             if (!regex.IsMatch(model))
             {
-                this.errorProvider1.SetError(this.txtBox_model, "Zadejte validní číslo modelu!");
+                this.errorProvider1.SetError(this.txtBox_modelName, "Zadejte validní číslo modelu!");
                 return;
             }
             

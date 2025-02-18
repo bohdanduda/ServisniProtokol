@@ -28,112 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.txtBox_maker = new System.Windows.Forms.TextBox();
-            this.lbl_model = new System.Windows.Forms.Label();
-            this.lbl_maker = new System.Windows.Forms.Label();
-            this.txtBox_modelName = new System.Windows.Forms.TextBox();
-            this.txtBox_serialNum = new System.Windows.Forms.TextBox();
-            this.lbl_serialNumber = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            btn_cancel = new Button();
+            btn_save = new Button();
+            txtBox_producer = new TextBox();
+            lbl_model = new Label();
+            lbl_maker = new Label();
+            txtBox_modelName = new TextBox();
+            txtBox_serialNum = new TextBox();
+            lbl_serialNumber = new Label();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(258, 115);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel.TabIndex = 11;
-            this.btn_cancel.Text = "STORNO";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            btn_cancel.Location = new Point(258, 115);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(75, 23);
+            btn_cancel.TabIndex = 11;
+            btn_cancel.Text = "STORNO";
+            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(177, 115);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 10;
-            this.btn_save.Text = "OK";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            btn_save.Location = new Point(177, 115);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(75, 23);
+            btn_save.TabIndex = 10;
+            btn_save.Text = "OK";
+            btn_save.UseVisualStyleBackColor = true;
+            btn_save.Click += btn_save_Click;
             // 
-            // txtBox_maker
+            // txtBox_producer
             // 
-            this.txtBox_maker.Location = new System.Drawing.Point(107, 12);
-            this.txtBox_maker.Name = "txtBox_maker";
-            this.txtBox_maker.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_maker.TabIndex = 9;
+            txtBox_producer.Location = new Point(107, 12);
+            txtBox_producer.Name = "txtBox_producer";
+            txtBox_producer.Size = new Size(226, 23);
+            txtBox_producer.TabIndex = 9;
             // 
             // lbl_model
             // 
-            this.lbl_model.AutoSize = true;
-            this.lbl_model.Location = new System.Drawing.Point(52, 44);
-            this.lbl_model.Name = "lbl_model";
-            this.lbl_model.Size = new System.Drawing.Size(44, 15);
-            this.lbl_model.TabIndex = 8;
-            this.lbl_model.Text = "Model:";
+            lbl_model.AutoSize = true;
+            lbl_model.Location = new Point(52, 44);
+            lbl_model.Name = "lbl_model";
+            lbl_model.Size = new Size(44, 15);
+            lbl_model.TabIndex = 8;
+            lbl_model.Text = "Model:";
             // 
             // lbl_maker
             // 
-            this.lbl_maker.AutoSize = true;
-            this.lbl_maker.Location = new System.Drawing.Point(43, 15);
-            this.lbl_maker.Name = "lbl_maker";
-            this.lbl_maker.Size = new System.Drawing.Size(53, 15);
-            this.lbl_maker.TabIndex = 7;
-            this.lbl_maker.Text = "Výrobce:";
+            lbl_maker.AutoSize = true;
+            lbl_maker.Location = new Point(43, 15);
+            lbl_maker.Name = "lbl_maker";
+            lbl_maker.Size = new Size(53, 15);
+            lbl_maker.TabIndex = 7;
+            lbl_maker.Text = "Výrobce:";
             // 
             // txtBox_modelName
             // 
-            this.txtBox_modelName.Location = new System.Drawing.Point(107, 41);
-            this.txtBox_modelName.Name = "txtBox_modelName";
-            this.txtBox_modelName.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_modelName.TabIndex = 12;
+            txtBox_modelName.Location = new Point(107, 41);
+            txtBox_modelName.Name = "txtBox_modelName";
+            txtBox_modelName.Size = new Size(226, 23);
+            txtBox_modelName.TabIndex = 12;
             // 
             // txtBox_serialNum
             // 
-            this.txtBox_serialNum.Location = new System.Drawing.Point(107, 70);
-            this.txtBox_serialNum.Name = "txtBox_serialNum";
-            this.txtBox_serialNum.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_serialNum.TabIndex = 14;
+            txtBox_serialNum.Location = new Point(107, 70);
+            txtBox_serialNum.Name = "txtBox_serialNum";
+            txtBox_serialNum.Size = new Size(226, 23);
+            txtBox_serialNum.TabIndex = 14;
             // 
             // lbl_serialNumber
             // 
-            this.lbl_serialNumber.AutoSize = true;
-            this.lbl_serialNumber.Location = new System.Drawing.Point(19, 73);
-            this.lbl_serialNumber.Name = "lbl_serialNumber";
-            this.lbl_serialNumber.Size = new System.Drawing.Size(77, 15);
-            this.lbl_serialNumber.TabIndex = 13;
-            this.lbl_serialNumber.Text = "Seriové Číslo:";
+            lbl_serialNumber.AutoSize = true;
+            lbl_serialNumber.Location = new Point(19, 73);
+            lbl_serialNumber.Name = "lbl_serialNumber";
+            lbl_serialNumber.Size = new Size(77, 15);
+            lbl_serialNumber.TabIndex = 13;
+            lbl_serialNumber.Text = "Seriové Číslo:";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // DeviceInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 149);
-            this.Controls.Add(this.txtBox_serialNum);
-            this.Controls.Add(this.lbl_serialNumber);
-            this.Controls.Add(this.txtBox_modelName);
-            this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.txtBox_maker);
-            this.Controls.Add(this.lbl_model);
-            this.Controls.Add(this.lbl_maker);
-            this.Name = "DeviceInfoForm";
-            this.Text = "Zařízení";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(349, 149);
+            Controls.Add(txtBox_serialNum);
+            Controls.Add(lbl_serialNumber);
+            Controls.Add(txtBox_modelName);
+            Controls.Add(btn_cancel);
+            Controls.Add(btn_save);
+            Controls.Add(txtBox_producer);
+            Controls.Add(lbl_model);
+            Controls.Add(lbl_maker);
+            Name = "DeviceInfoForm";
+            Text = "Zařízení";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
         private Button btn_cancel;
         private Button btn_save;
-        private TextBox txtBox_maker;
+        private TextBox txtBox_producer;
         private Label lbl_model;
         private Label lbl_maker;
         private TextBox txtBox_modelName;
         private TextBox txtBox_serialNum;
         private Label lbl_serialNumber;
+        private ErrorProvider errorProvider1;
     }
 }

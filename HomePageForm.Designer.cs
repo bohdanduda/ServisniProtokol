@@ -28,410 +28,413 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_measurement = new System.Windows.Forms.Label();
-            this.txtBox_serialNumber = new System.Windows.Forms.TextBox();
-            this.txtBox_modelName = new System.Windows.Forms.TextBox();
-            this.txtBox_producerName = new System.Windows.Forms.TextBox();
-            this.txtBox_id = new System.Windows.Forms.TextBox();
-            this.txtBox_postNumber = new System.Windows.Forms.TextBox();
-            this.txtBox_address = new System.Windows.Forms.TextBox();
-            this.txtBox_name = new System.Windows.Forms.TextBox();
-            this.txtBox_dateOfMeasurement = new System.Windows.Forms.TextBox();
-            this.txtBox_protocolNumber = new System.Windows.Forms.TextBox();
-            this.btn_editDeviceInfo = new System.Windows.Forms.Button();
-            this.lbl_serialNumber = new System.Windows.Forms.Label();
-            this.lbl_modelName = new System.Windows.Forms.Label();
-            this.lbl_producerName = new System.Windows.Forms.Label();
-            this.lbl_device = new System.Windows.Forms.Label();
-            this.btn_editCustomerInfo = new System.Windows.Forms.Button();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.lbl_postNumber = new System.Windows.Forms.Label();
-            this.lbl_address = new System.Windows.Forms.Label();
-            this.lbl_name = new System.Windows.Forms.Label();
-            this.lbl_customer = new System.Windows.Forms.Label();
-            this.btn_editBasicInfo = new System.Windows.Forms.Button();
-            this.lbl_dateOfMeasurement = new System.Windows.Forms.Label();
-            this.lbl_protocolNumber = new System.Windows.Forms.Label();
-            this.lbl_basicInfo = new System.Windows.Forms.Label();
-            this.dataGridView_measurement = new System.Windows.Forms.DataGridView();
-            this.Paremeter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MeasuredValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsValid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_preview = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_load = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_measurement)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            lbl_measurement = new Label();
+            txtBox_serialNumber = new TextBox();
+            txtBox_modelName = new TextBox();
+            txtBox_producerName = new TextBox();
+            txtBox_id = new TextBox();
+            txtBox_postNumber = new TextBox();
+            txtBox_address = new TextBox();
+            txtBox_name = new TextBox();
+            txtBox_dateOfMeasurement = new TextBox();
+            txtBox_protocolNumber = new TextBox();
+            btn_editDeviceInfo = new Button();
+            lbl_serialNumber = new Label();
+            lbl_modelName = new Label();
+            lbl_producerName = new Label();
+            lbl_device = new Label();
+            btn_editCustomerInfo = new Button();
+            lbl_id = new Label();
+            lbl_postNumber = new Label();
+            lbl_address = new Label();
+            lbl_name = new Label();
+            lbl_customer = new Label();
+            btn_editBasicInfo = new Button();
+            lbl_dateOfMeasurement = new Label();
+            lbl_protocolNumber = new Label();
+            lbl_basicInfo = new Label();
+            dataGridView_measurement = new DataGridView();
+            Paremeter = new DataGridViewTextBoxColumn();
+            MeasuredValue = new DataGridViewTextBoxColumn();
+            Value = new DataGridViewTextBoxColumn();
+            IsValid = new DataGridViewTextBoxColumn();
+            btn_add = new Button();
+            btn_edit = new Button();
+            btn_delete = new Button();
+            btn_preview = new Button();
+            btn_save = new Button();
+            btn_load = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)dataGridView_measurement).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // lbl_measurement
             // 
-            this.lbl_measurement.AutoSize = true;
-            this.lbl_measurement.Location = new System.Drawing.Point(73, 399);
-            this.lbl_measurement.Name = "lbl_measurement";
-            this.lbl_measurement.Size = new System.Drawing.Size(44, 15);
-            this.lbl_measurement.TabIndex = 50;
-            this.lbl_measurement.Text = "Měření";
+            lbl_measurement.AutoSize = true;
+            lbl_measurement.Location = new Point(73, 399);
+            lbl_measurement.Name = "lbl_measurement";
+            lbl_measurement.Size = new Size(44, 15);
+            lbl_measurement.TabIndex = 50;
+            lbl_measurement.Text = "Měření";
             // 
             // txtBox_serialNumber
             // 
-            this.txtBox_serialNumber.Location = new System.Drawing.Point(627, 269);
-            this.txtBox_serialNumber.Name = "txtBox_serialNumber";
-            this.txtBox_serialNumber.ReadOnly = true;
-            this.txtBox_serialNumber.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_serialNumber.TabIndex = 49;
-            this.txtBox_serialNumber.Text = "?";
+            txtBox_serialNumber.Location = new Point(627, 269);
+            txtBox_serialNumber.Name = "txtBox_serialNumber";
+            txtBox_serialNumber.ReadOnly = true;
+            txtBox_serialNumber.Size = new Size(100, 23);
+            txtBox_serialNumber.TabIndex = 49;
+            txtBox_serialNumber.Text = "?";
             // 
             // txtBox_modelName
             // 
-            this.txtBox_modelName.Location = new System.Drawing.Point(627, 240);
-            this.txtBox_modelName.Name = "txtBox_modelName";
-            this.txtBox_modelName.ReadOnly = true;
-            this.txtBox_modelName.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_modelName.TabIndex = 48;
-            this.txtBox_modelName.Text = "?";
+            txtBox_modelName.Location = new Point(627, 240);
+            txtBox_modelName.Name = "txtBox_modelName";
+            txtBox_modelName.ReadOnly = true;
+            txtBox_modelName.Size = new Size(100, 23);
+            txtBox_modelName.TabIndex = 48;
+            txtBox_modelName.Text = "?";
             // 
             // txtBox_producerName
             // 
-            this.txtBox_producerName.Location = new System.Drawing.Point(627, 211);
-            this.txtBox_producerName.Name = "txtBox_producerName";
-            this.txtBox_producerName.ReadOnly = true;
-            this.txtBox_producerName.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_producerName.TabIndex = 47;
-            this.txtBox_producerName.Text = "?";
+            txtBox_producerName.Location = new Point(627, 211);
+            txtBox_producerName.Name = "txtBox_producerName";
+            txtBox_producerName.ReadOnly = true;
+            txtBox_producerName.Size = new Size(100, 23);
+            txtBox_producerName.TabIndex = 47;
+            txtBox_producerName.Text = "?";
             // 
             // txtBox_id
             // 
-            this.txtBox_id.Location = new System.Drawing.Point(216, 295);
-            this.txtBox_id.Name = "txtBox_id";
-            this.txtBox_id.ReadOnly = true;
-            this.txtBox_id.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_id.TabIndex = 46;
-            this.txtBox_id.Text = "?";
+            txtBox_id.Location = new Point(216, 295);
+            txtBox_id.Name = "txtBox_id";
+            txtBox_id.ReadOnly = true;
+            txtBox_id.Size = new Size(100, 23);
+            txtBox_id.TabIndex = 46;
+            txtBox_id.Text = "?";
             // 
             // txtBox_postNumber
             // 
-            this.txtBox_postNumber.Location = new System.Drawing.Point(216, 266);
-            this.txtBox_postNumber.Name = "txtBox_postNumber";
-            this.txtBox_postNumber.ReadOnly = true;
-            this.txtBox_postNumber.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_postNumber.TabIndex = 45;
-            this.txtBox_postNumber.Text = "?";
+            txtBox_postNumber.Location = new Point(216, 266);
+            txtBox_postNumber.Name = "txtBox_postNumber";
+            txtBox_postNumber.ReadOnly = true;
+            txtBox_postNumber.Size = new Size(100, 23);
+            txtBox_postNumber.TabIndex = 45;
+            txtBox_postNumber.Text = "?";
             // 
             // txtBox_address
             // 
-            this.txtBox_address.Location = new System.Drawing.Point(216, 237);
-            this.txtBox_address.Name = "txtBox_address";
-            this.txtBox_address.ReadOnly = true;
-            this.txtBox_address.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_address.TabIndex = 44;
-            this.txtBox_address.Text = "?";
+            txtBox_address.Location = new Point(216, 237);
+            txtBox_address.Name = "txtBox_address";
+            txtBox_address.ReadOnly = true;
+            txtBox_address.Size = new Size(100, 23);
+            txtBox_address.TabIndex = 44;
+            txtBox_address.Text = "?";
             // 
             // txtBox_name
             // 
-            this.txtBox_name.Location = new System.Drawing.Point(216, 208);
-            this.txtBox_name.Name = "txtBox_name";
-            this.txtBox_name.ReadOnly = true;
-            this.txtBox_name.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_name.TabIndex = 43;
-            this.txtBox_name.Text = "?";
+            txtBox_name.Location = new Point(216, 208);
+            txtBox_name.Name = "txtBox_name";
+            txtBox_name.ReadOnly = true;
+            txtBox_name.Size = new Size(100, 23);
+            txtBox_name.TabIndex = 43;
+            txtBox_name.Text = "?";
             // 
             // txtBox_dateOfMeasurement
             // 
-            this.txtBox_dateOfMeasurement.Location = new System.Drawing.Point(216, 100);
-            this.txtBox_dateOfMeasurement.Name = "txtBox_dateOfMeasurement";
-            this.txtBox_dateOfMeasurement.ReadOnly = true;
-            this.txtBox_dateOfMeasurement.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_dateOfMeasurement.TabIndex = 42;
-            this.txtBox_dateOfMeasurement.Text = "?";
+            txtBox_dateOfMeasurement.Location = new Point(216, 100);
+            txtBox_dateOfMeasurement.Name = "txtBox_dateOfMeasurement";
+            txtBox_dateOfMeasurement.ReadOnly = true;
+            txtBox_dateOfMeasurement.Size = new Size(100, 23);
+            txtBox_dateOfMeasurement.TabIndex = 42;
+            txtBox_dateOfMeasurement.Text = "?";
             // 
             // txtBox_protocolNumber
             // 
-            this.txtBox_protocolNumber.Location = new System.Drawing.Point(216, 71);
-            this.txtBox_protocolNumber.Name = "txtBox_protocolNumber";
-            this.txtBox_protocolNumber.ReadOnly = true;
-            this.txtBox_protocolNumber.Size = new System.Drawing.Size(100, 23);
-            this.txtBox_protocolNumber.TabIndex = 41;
-            this.txtBox_protocolNumber.Text = "?";
+            txtBox_protocolNumber.Location = new Point(216, 71);
+            txtBox_protocolNumber.Name = "txtBox_protocolNumber";
+            txtBox_protocolNumber.ReadOnly = true;
+            txtBox_protocolNumber.Size = new Size(100, 23);
+            txtBox_protocolNumber.TabIndex = 41;
+            txtBox_protocolNumber.Text = "?";
             // 
             // btn_editDeviceInfo
             // 
-            this.btn_editDeviceInfo.Location = new System.Drawing.Point(652, 315);
-            this.btn_editDeviceInfo.Name = "btn_editDeviceInfo";
-            this.btn_editDeviceInfo.Size = new System.Drawing.Size(75, 23);
-            this.btn_editDeviceInfo.TabIndex = 40;
-            this.btn_editDeviceInfo.Text = "Upravit";
-            this.btn_editDeviceInfo.UseVisualStyleBackColor = true;
-            this.btn_editDeviceInfo.Click += new System.EventHandler(this.btn_editDeviceInfo_Click);
+            btn_editDeviceInfo.Location = new Point(652, 315);
+            btn_editDeviceInfo.Name = "btn_editDeviceInfo";
+            btn_editDeviceInfo.Size = new Size(75, 23);
+            btn_editDeviceInfo.TabIndex = 40;
+            btn_editDeviceInfo.Text = "Upravit";
+            btn_editDeviceInfo.UseVisualStyleBackColor = true;
+            btn_editDeviceInfo.Click += btn_editDeviceInfo_Click;
             // 
             // lbl_serialNumber
             // 
-            this.lbl_serialNumber.AutoSize = true;
-            this.lbl_serialNumber.Location = new System.Drawing.Point(533, 274);
-            this.lbl_serialNumber.Name = "lbl_serialNumber";
-            this.lbl_serialNumber.Size = new System.Drawing.Size(77, 15);
-            this.lbl_serialNumber.TabIndex = 39;
-            this.lbl_serialNumber.Text = "Sériové Číslo:";
+            lbl_serialNumber.AutoSize = true;
+            lbl_serialNumber.Location = new Point(533, 274);
+            lbl_serialNumber.Name = "lbl_serialNumber";
+            lbl_serialNumber.Size = new Size(77, 15);
+            lbl_serialNumber.TabIndex = 39;
+            lbl_serialNumber.Text = "Sériové Číslo:";
             // 
             // lbl_modelName
             // 
-            this.lbl_modelName.AutoSize = true;
-            this.lbl_modelName.Location = new System.Drawing.Point(533, 245);
-            this.lbl_modelName.Name = "lbl_modelName";
-            this.lbl_modelName.Size = new System.Drawing.Size(44, 15);
-            this.lbl_modelName.TabIndex = 38;
-            this.lbl_modelName.Text = "Model:";
+            lbl_modelName.AutoSize = true;
+            lbl_modelName.Location = new Point(533, 245);
+            lbl_modelName.Name = "lbl_modelName";
+            lbl_modelName.Size = new Size(44, 15);
+            lbl_modelName.TabIndex = 38;
+            lbl_modelName.Text = "Model:";
             // 
             // lbl_producerName
             // 
-            this.lbl_producerName.AutoSize = true;
-            this.lbl_producerName.Location = new System.Drawing.Point(533, 214);
-            this.lbl_producerName.Name = "lbl_producerName";
-            this.lbl_producerName.Size = new System.Drawing.Size(53, 15);
-            this.lbl_producerName.TabIndex = 37;
-            this.lbl_producerName.Text = "Výrobce:";
+            lbl_producerName.AutoSize = true;
+            lbl_producerName.Location = new Point(533, 214);
+            lbl_producerName.Name = "lbl_producerName";
+            lbl_producerName.Size = new Size(53, 15);
+            lbl_producerName.TabIndex = 37;
+            lbl_producerName.Text = "Výrobce:";
             // 
             // lbl_device
             // 
-            this.lbl_device.AutoSize = true;
-            this.lbl_device.Location = new System.Drawing.Point(515, 178);
-            this.lbl_device.Name = "lbl_device";
-            this.lbl_device.Size = new System.Drawing.Size(48, 15);
-            this.lbl_device.TabIndex = 36;
-            this.lbl_device.Text = "Zařízení";
+            lbl_device.AutoSize = true;
+            lbl_device.Location = new Point(515, 178);
+            lbl_device.Name = "lbl_device";
+            lbl_device.Size = new Size(48, 15);
+            lbl_device.TabIndex = 36;
+            lbl_device.Text = "Zařízení";
             // 
             // btn_editCustomerInfo
             // 
-            this.btn_editCustomerInfo.Location = new System.Drawing.Point(241, 324);
-            this.btn_editCustomerInfo.Name = "btn_editCustomerInfo";
-            this.btn_editCustomerInfo.Size = new System.Drawing.Size(75, 23);
-            this.btn_editCustomerInfo.TabIndex = 35;
-            this.btn_editCustomerInfo.Text = "Upravit";
-            this.btn_editCustomerInfo.UseVisualStyleBackColor = true;
-            this.btn_editCustomerInfo.Click += new System.EventHandler(this.btn_editCustomerInfo_Click);
+            btn_editCustomerInfo.Location = new Point(241, 324);
+            btn_editCustomerInfo.Name = "btn_editCustomerInfo";
+            btn_editCustomerInfo.Size = new Size(75, 23);
+            btn_editCustomerInfo.TabIndex = 35;
+            btn_editCustomerInfo.Text = "Upravit";
+            btn_editCustomerInfo.UseVisualStyleBackColor = true;
+            btn_editCustomerInfo.Click += btn_editCustomerInfo_Click;
             // 
             // lbl_id
             // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(91, 297);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(21, 15);
-            this.lbl_id.TabIndex = 34;
-            this.lbl_id.Text = "IČ:";
+            lbl_id.AutoSize = true;
+            lbl_id.Location = new Point(91, 297);
+            lbl_id.Name = "lbl_id";
+            lbl_id.Size = new Size(21, 15);
+            lbl_id.TabIndex = 34;
+            lbl_id.Text = "IČ:";
             // 
             // lbl_postNumber
             // 
-            this.lbl_postNumber.AutoSize = true;
-            this.lbl_postNumber.Location = new System.Drawing.Point(91, 268);
-            this.lbl_postNumber.Name = "lbl_postNumber";
-            this.lbl_postNumber.Size = new System.Drawing.Size(31, 15);
-            this.lbl_postNumber.TabIndex = 33;
-            this.lbl_postNumber.Text = "PSČ:";
+            lbl_postNumber.AutoSize = true;
+            lbl_postNumber.Location = new Point(91, 268);
+            lbl_postNumber.Name = "lbl_postNumber";
+            lbl_postNumber.Size = new Size(31, 15);
+            lbl_postNumber.TabIndex = 33;
+            lbl_postNumber.Text = "PSČ:";
             // 
             // lbl_address
             // 
-            this.lbl_address.AutoSize = true;
-            this.lbl_address.Location = new System.Drawing.Point(91, 238);
-            this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(46, 15);
-            this.lbl_address.TabIndex = 32;
-            this.lbl_address.Text = "Adresa:";
+            lbl_address.AutoSize = true;
+            lbl_address.Location = new Point(91, 238);
+            lbl_address.Name = "lbl_address";
+            lbl_address.Size = new Size(46, 15);
+            lbl_address.TabIndex = 32;
+            lbl_address.Text = "Adresa:";
             // 
             // lbl_name
             // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(91, 211);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(42, 15);
-            this.lbl_name.TabIndex = 31;
-            this.lbl_name.Text = "Název:";
+            lbl_name.AutoSize = true;
+            lbl_name.Location = new Point(91, 211);
+            lbl_name.Name = "lbl_name";
+            lbl_name.Size = new Size(42, 15);
+            lbl_name.TabIndex = 31;
+            lbl_name.Text = "Název:";
             // 
             // lbl_customer
             // 
-            this.lbl_customer.AutoSize = true;
-            this.lbl_customer.Location = new System.Drawing.Point(73, 178);
-            this.lbl_customer.Name = "lbl_customer";
-            this.lbl_customer.Size = new System.Drawing.Size(53, 15);
-            this.lbl_customer.TabIndex = 30;
-            this.lbl_customer.Text = "Zákazník";
+            lbl_customer.AutoSize = true;
+            lbl_customer.Location = new Point(73, 178);
+            lbl_customer.Name = "lbl_customer";
+            lbl_customer.Size = new Size(53, 15);
+            lbl_customer.TabIndex = 30;
+            lbl_customer.Text = "Zákazník";
             // 
             // btn_editBasicInfo
             // 
-            this.btn_editBasicInfo.Location = new System.Drawing.Point(564, 74);
-            this.btn_editBasicInfo.Name = "btn_editBasicInfo";
-            this.btn_editBasicInfo.Size = new System.Drawing.Size(101, 46);
-            this.btn_editBasicInfo.TabIndex = 29;
-            this.btn_editBasicInfo.Text = "Upravit";
-            this.btn_editBasicInfo.UseVisualStyleBackColor = true;
-            this.btn_editBasicInfo.Click += new System.EventHandler(this.btn_editBasicInfo_Click);
+            btn_editBasicInfo.Location = new Point(564, 74);
+            btn_editBasicInfo.Name = "btn_editBasicInfo";
+            btn_editBasicInfo.Size = new Size(101, 46);
+            btn_editBasicInfo.TabIndex = 29;
+            btn_editBasicInfo.Text = "Upravit";
+            btn_editBasicInfo.UseVisualStyleBackColor = true;
+            btn_editBasicInfo.Click += btn_editBasicInfo_Click;
             // 
             // lbl_dateOfMeasurement
             // 
-            this.lbl_dateOfMeasurement.AutoSize = true;
-            this.lbl_dateOfMeasurement.Location = new System.Drawing.Point(91, 105);
-            this.lbl_dateOfMeasurement.Name = "lbl_dateOfMeasurement";
-            this.lbl_dateOfMeasurement.Size = new System.Drawing.Size(86, 15);
-            this.lbl_dateOfMeasurement.TabIndex = 28;
-            this.lbl_dateOfMeasurement.Text = "Datum Měření:";
+            lbl_dateOfMeasurement.AutoSize = true;
+            lbl_dateOfMeasurement.Location = new Point(91, 105);
+            lbl_dateOfMeasurement.Name = "lbl_dateOfMeasurement";
+            lbl_dateOfMeasurement.Size = new Size(86, 15);
+            lbl_dateOfMeasurement.TabIndex = 28;
+            lbl_dateOfMeasurement.Text = "Datum Měření:";
             // 
             // lbl_protocolNumber
             // 
-            this.lbl_protocolNumber.AutoSize = true;
-            this.lbl_protocolNumber.Location = new System.Drawing.Point(91, 74);
-            this.lbl_protocolNumber.Name = "lbl_protocolNumber";
-            this.lbl_protocolNumber.Size = new System.Drawing.Size(91, 15);
-            this.lbl_protocolNumber.TabIndex = 27;
-            this.lbl_protocolNumber.Text = "Číslo Protokolu:";
+            lbl_protocolNumber.AutoSize = true;
+            lbl_protocolNumber.Location = new Point(91, 74);
+            lbl_protocolNumber.Name = "lbl_protocolNumber";
+            lbl_protocolNumber.Size = new Size(91, 15);
+            lbl_protocolNumber.TabIndex = 27;
+            lbl_protocolNumber.Text = "Číslo Protokolu:";
             // 
             // lbl_basicInfo
             // 
-            this.lbl_basicInfo.AutoSize = true;
-            this.lbl_basicInfo.Location = new System.Drawing.Point(73, 36);
-            this.lbl_basicInfo.Name = "lbl_basicInfo";
-            this.lbl_basicInfo.Size = new System.Drawing.Size(109, 15);
-            this.lbl_basicInfo.TabIndex = 26;
-            this.lbl_basicInfo.Text = "Základní Informace";
+            lbl_basicInfo.AutoSize = true;
+            lbl_basicInfo.Location = new Point(73, 36);
+            lbl_basicInfo.Name = "lbl_basicInfo";
+            lbl_basicInfo.Size = new Size(109, 15);
+            lbl_basicInfo.TabIndex = 26;
+            lbl_basicInfo.Text = "Základní Informace";
             // 
             // dataGridView_measurement
             // 
-            this.dataGridView_measurement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_measurement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Paremeter,
-            this.MeasuredValue,
-            this.Value,
-            this.IsValid});
-            this.dataGridView_measurement.Location = new System.Drawing.Point(91, 429);
-            this.dataGridView_measurement.Name = "dataGridView_measurement";
-            this.dataGridView_measurement.RowTemplate.Height = 25;
-            this.dataGridView_measurement.Size = new System.Drawing.Size(623, 180);
-            this.dataGridView_measurement.TabIndex = 51;
+            dataGridView_measurement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_measurement.Columns.AddRange(new DataGridViewColumn[] { Paremeter, MeasuredValue, Value, IsValid });
+            dataGridView_measurement.Location = new Point(91, 429);
+            dataGridView_measurement.Name = "dataGridView_measurement";
+            dataGridView_measurement.Size = new Size(623, 180);
+            dataGridView_measurement.TabIndex = 51;
             // 
             // Paremeter
             // 
-            this.Paremeter.HeaderText = "Parametr";
-            this.Paremeter.Name = "Paremeter";
+            Paremeter.HeaderText = "Parametr";
+            Paremeter.Name = "Paremeter";
             // 
             // MeasuredValue
             // 
-            this.MeasuredValue.HeaderText = "Naměřená Jednotka";
-            this.MeasuredValue.Name = "MeasuredValue";
+            MeasuredValue.HeaderText = "Naměřená Jednotka";
+            MeasuredValue.Name = "MeasuredValue";
             // 
             // Value
             // 
-            this.Value.HeaderText = "Jednotka";
-            this.Value.Name = "Value";
+            Value.HeaderText = "Jednotka";
+            Value.Name = "Value";
             // 
             // IsValid
             // 
-            this.IsValid.HeaderText = "Vyhovuje";
-            this.IsValid.Name = "IsValid";
+            IsValid.HeaderText = "Vyhovuje";
+            IsValid.Name = "IsValid";
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(477, 615);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 52;
-            this.btn_add.Text = "Přidat";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            btn_add.Location = new Point(477, 615);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(75, 23);
+            btn_add.TabIndex = 52;
+            btn_add.Text = "Přidat";
+            btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(558, 615);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(75, 23);
-            this.btn_edit.TabIndex = 53;
-            this.btn_edit.Text = "Upravit";
-            this.btn_edit.UseVisualStyleBackColor = true;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            btn_edit.Location = new Point(558, 615);
+            btn_edit.Name = "btn_edit";
+            btn_edit.Size = new Size(75, 23);
+            btn_edit.TabIndex = 53;
+            btn_edit.Text = "Upravit";
+            btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.Click += btn_edit_Click;
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(639, 615);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
-            this.btn_delete.TabIndex = 54;
-            this.btn_delete.Text = "Smazat";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            btn_delete.Location = new Point(639, 615);
+            btn_delete.Name = "btn_delete";
+            btn_delete.Size = new Size(75, 23);
+            btn_delete.TabIndex = 54;
+            btn_delete.Text = "Smazat";
+            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.Click += btn_delete_Click;
             // 
             // btn_preview
             // 
-            this.btn_preview.Location = new System.Drawing.Point(713, 663);
-            this.btn_preview.Name = "btn_preview";
-            this.btn_preview.Size = new System.Drawing.Size(75, 23);
-            this.btn_preview.TabIndex = 55;
-            this.btn_preview.Text = "Náhled";
-            this.btn_preview.UseVisualStyleBackColor = true;
-            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
+            btn_preview.Location = new Point(713, 663);
+            btn_preview.Name = "btn_preview";
+            btn_preview.Size = new Size(75, 23);
+            btn_preview.TabIndex = 55;
+            btn_preview.Text = "Náhled";
+            btn_preview.UseVisualStyleBackColor = true;
+            btn_preview.Click += btn_preview_Click;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(12, 663);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 56;
-            this.btn_save.Text = "Uložit";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            btn_save.Location = new Point(12, 663);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(75, 23);
+            btn_save.TabIndex = 56;
+            btn_save.Text = "Uložit";
+            btn_save.UseVisualStyleBackColor = true;
+            btn_save.Click += btn_save_Click;
             // 
             // btn_load
             // 
-            this.btn_load.Location = new System.Drawing.Point(102, 663);
-            this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(75, 23);
-            this.btn_load.TabIndex = 57;
-            this.btn_load.Text = "Načíst";
-            this.btn_load.UseVisualStyleBackColor = true;
-            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            btn_load.Location = new Point(102, 663);
+            btn_load.Name = "btn_load";
+            btn_load.Size = new Size(75, 23);
+            btn_load.TabIndex = 57;
+            btn_load.Text = "Načíst";
+            btn_load.UseVisualStyleBackColor = true;
+            btn_load.Click += btn_load_Click;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // HomePageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 698);
-            this.Controls.Add(this.btn_load);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.btn_preview);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_edit);
-            this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.dataGridView_measurement);
-            this.Controls.Add(this.lbl_measurement);
-            this.Controls.Add(this.txtBox_serialNumber);
-            this.Controls.Add(this.txtBox_modelName);
-            this.Controls.Add(this.txtBox_producerName);
-            this.Controls.Add(this.txtBox_id);
-            this.Controls.Add(this.txtBox_postNumber);
-            this.Controls.Add(this.txtBox_address);
-            this.Controls.Add(this.txtBox_name);
-            this.Controls.Add(this.txtBox_dateOfMeasurement);
-            this.Controls.Add(this.txtBox_protocolNumber);
-            this.Controls.Add(this.btn_editDeviceInfo);
-            this.Controls.Add(this.lbl_serialNumber);
-            this.Controls.Add(this.lbl_modelName);
-            this.Controls.Add(this.lbl_producerName);
-            this.Controls.Add(this.lbl_device);
-            this.Controls.Add(this.btn_editCustomerInfo);
-            this.Controls.Add(this.lbl_id);
-            this.Controls.Add(this.lbl_postNumber);
-            this.Controls.Add(this.lbl_address);
-            this.Controls.Add(this.lbl_name);
-            this.Controls.Add(this.lbl_customer);
-            this.Controls.Add(this.btn_editBasicInfo);
-            this.Controls.Add(this.lbl_dateOfMeasurement);
-            this.Controls.Add(this.lbl_protocolNumber);
-            this.Controls.Add(this.lbl_basicInfo);
-            this.Name = "HomePageForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_measurement)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 698);
+            Controls.Add(btn_load);
+            Controls.Add(btn_save);
+            Controls.Add(btn_preview);
+            Controls.Add(btn_delete);
+            Controls.Add(btn_edit);
+            Controls.Add(btn_add);
+            Controls.Add(dataGridView_measurement);
+            Controls.Add(lbl_measurement);
+            Controls.Add(txtBox_serialNumber);
+            Controls.Add(txtBox_modelName);
+            Controls.Add(txtBox_producerName);
+            Controls.Add(txtBox_id);
+            Controls.Add(txtBox_postNumber);
+            Controls.Add(txtBox_address);
+            Controls.Add(txtBox_name);
+            Controls.Add(txtBox_dateOfMeasurement);
+            Controls.Add(txtBox_protocolNumber);
+            Controls.Add(btn_editDeviceInfo);
+            Controls.Add(lbl_serialNumber);
+            Controls.Add(lbl_modelName);
+            Controls.Add(lbl_producerName);
+            Controls.Add(lbl_device);
+            Controls.Add(btn_editCustomerInfo);
+            Controls.Add(lbl_id);
+            Controls.Add(lbl_postNumber);
+            Controls.Add(lbl_address);
+            Controls.Add(lbl_name);
+            Controls.Add(lbl_customer);
+            Controls.Add(btn_editBasicInfo);
+            Controls.Add(lbl_dateOfMeasurement);
+            Controls.Add(lbl_protocolNumber);
+            Controls.Add(lbl_basicInfo);
+            Name = "HomePageForm";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView_measurement).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -473,5 +476,6 @@
         private Button btn_preview;
         private Button btn_save;
         private Button btn_load;
+        private ErrorProvider errorProvider1;
     }
 }

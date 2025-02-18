@@ -28,121 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBox_postNum = new System.Windows.Forms.TextBox();
-            this.lbl_postNumber = new System.Windows.Forms.Label();
-            this.txtBox_address = new System.Windows.Forms.TextBox();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.txtBox_name = new System.Windows.Forms.TextBox();
-            this.lbl_address = new System.Windows.Forms.Label();
-            this.lbl_name = new System.Windows.Forms.Label();
-            this.txtBox_id = new System.Windows.Forms.TextBox();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            txtBox_postNum = new TextBox();
+            lbl_postNumber = new Label();
+            txtBox_address = new TextBox();
+            btn_cancel = new Button();
+            btn_save = new Button();
+            txtBox_name = new TextBox();
+            lbl_address = new Label();
+            lbl_name = new Label();
+            txtBox_id = new TextBox();
+            lbl_id = new Label();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // txtBox_postNum
             // 
-            this.txtBox_postNum.Location = new System.Drawing.Point(64, 67);
-            this.txtBox_postNum.Name = "txtBox_postNum";
-            this.txtBox_postNum.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_postNum.TabIndex = 22;
+            txtBox_postNum.Location = new Point(64, 67);
+            txtBox_postNum.Name = "txtBox_postNum";
+            txtBox_postNum.Size = new Size(226, 23);
+            txtBox_postNum.TabIndex = 22;
             // 
             // lbl_postNumber
             // 
-            this.lbl_postNumber.AutoSize = true;
-            this.lbl_postNumber.Location = new System.Drawing.Point(22, 70);
-            this.lbl_postNumber.Name = "lbl_postNumber";
-            this.lbl_postNumber.Size = new System.Drawing.Size(31, 15);
-            this.lbl_postNumber.TabIndex = 21;
-            this.lbl_postNumber.Text = "PSČ:";
+            lbl_postNumber.AutoSize = true;
+            lbl_postNumber.Location = new Point(22, 70);
+            lbl_postNumber.Name = "lbl_postNumber";
+            lbl_postNumber.Size = new Size(31, 15);
+            lbl_postNumber.TabIndex = 21;
+            lbl_postNumber.Text = "PSČ:";
             // 
             // txtBox_address
             // 
-            this.txtBox_address.Location = new System.Drawing.Point(64, 38);
-            this.txtBox_address.Name = "txtBox_address";
-            this.txtBox_address.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_address.TabIndex = 20;
+            txtBox_address.Location = new Point(64, 38);
+            txtBox_address.Name = "txtBox_address";
+            txtBox_address.Size = new Size(226, 23);
+            txtBox_address.TabIndex = 20;
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(215, 147);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel.TabIndex = 19;
-            this.btn_cancel.Text = "STORNO";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            btn_cancel.Location = new Point(215, 147);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(75, 23);
+            btn_cancel.TabIndex = 19;
+            btn_cancel.Text = "STORNO";
+            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(134, 147);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 18;
-            this.btn_save.Text = "OK";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            btn_save.Location = new Point(134, 147);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(75, 23);
+            btn_save.TabIndex = 18;
+            btn_save.Text = "OK";
+            btn_save.UseVisualStyleBackColor = true;
+            btn_save.Click += btn_save_Click;
             // 
             // txtBox_name
             // 
-            this.txtBox_name.Location = new System.Drawing.Point(64, 9);
-            this.txtBox_name.Name = "txtBox_name";
-            this.txtBox_name.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_name.TabIndex = 17;
+            txtBox_name.Location = new Point(64, 9);
+            txtBox_name.Name = "txtBox_name";
+            txtBox_name.Size = new Size(226, 23);
+            txtBox_name.TabIndex = 17;
             // 
             // lbl_address
             // 
-            this.lbl_address.AutoSize = true;
-            this.lbl_address.Location = new System.Drawing.Point(9, 41);
-            this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(46, 15);
-            this.lbl_address.TabIndex = 16;
-            this.lbl_address.Text = "Adresa:";
+            lbl_address.AutoSize = true;
+            lbl_address.Location = new Point(9, 41);
+            lbl_address.Name = "lbl_address";
+            lbl_address.Size = new Size(46, 15);
+            lbl_address.TabIndex = 16;
+            lbl_address.Text = "Adresa:";
             // 
             // lbl_name
             // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(11, 12);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(42, 15);
-            this.lbl_name.TabIndex = 15;
-            this.lbl_name.Text = "Název:";
+            lbl_name.AutoSize = true;
+            lbl_name.Location = new Point(11, 12);
+            lbl_name.Name = "lbl_name";
+            lbl_name.Size = new Size(42, 15);
+            lbl_name.TabIndex = 15;
+            lbl_name.Text = "Název:";
             // 
             // txtBox_id
             // 
-            this.txtBox_id.Location = new System.Drawing.Point(64, 96);
-            this.txtBox_id.Name = "txtBox_id";
-            this.txtBox_id.Size = new System.Drawing.Size(226, 23);
-            this.txtBox_id.TabIndex = 24;
+            txtBox_id.Location = new Point(64, 96);
+            txtBox_id.Name = "txtBox_id";
+            txtBox_id.Size = new Size(226, 23);
+            txtBox_id.TabIndex = 24;
             // 
             // lbl_id
             // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(32, 99);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(21, 15);
-            this.lbl_id.TabIndex = 23;
-            this.lbl_id.Text = "IČ:";
+            lbl_id.AutoSize = true;
+            lbl_id.Location = new Point(32, 99);
+            lbl_id.Name = "lbl_id";
+            lbl_id.Size = new Size(21, 15);
+            lbl_id.TabIndex = 23;
+            lbl_id.Text = "IČ:";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // CustomerInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 181);
-            this.Controls.Add(this.txtBox_id);
-            this.Controls.Add(this.lbl_id);
-            this.Controls.Add(this.txtBox_postNum);
-            this.Controls.Add(this.lbl_postNumber);
-            this.Controls.Add(this.txtBox_address);
-            this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.txtBox_name);
-            this.Controls.Add(this.lbl_address);
-            this.Controls.Add(this.lbl_name);
-            this.Name = "CustomerInfoForm";
-            this.Text = "CustomerInfoForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(302, 181);
+            Controls.Add(txtBox_id);
+            Controls.Add(lbl_id);
+            Controls.Add(txtBox_postNum);
+            Controls.Add(lbl_postNumber);
+            Controls.Add(txtBox_address);
+            Controls.Add(btn_cancel);
+            Controls.Add(btn_save);
+            Controls.Add(txtBox_name);
+            Controls.Add(lbl_address);
+            Controls.Add(lbl_name);
+            Name = "CustomerInfoForm";
+            Text = "CustomerInfoForm";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -158,5 +166,6 @@
         private Label lbl_name;
         private TextBox txtBox_id;
         private Label lbl_id;
+        private ErrorProvider errorProvider1;
     }
 }
