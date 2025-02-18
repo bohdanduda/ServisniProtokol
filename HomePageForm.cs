@@ -3,7 +3,7 @@ namespace ServisniProtokol
     public partial class HomePageForm : Form
     {
         public static HomePageForm instance;
-        
+
         //textboxs for basic info
         public TextBox protocolNum;
         public TextBox date;
@@ -37,7 +37,11 @@ namespace ServisniProtokol
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
+        }
+        private void btn_addBasicInfo_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_editBasicInfo_Click(object sender, EventArgs e)
@@ -46,10 +50,20 @@ namespace ServisniProtokol
             basicInfoForm.ShowDialog();
         }
 
+        private void button_addDeviceInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_editDeviceInfo_Click(object sender, EventArgs e)
         {
             DeviceInfoForm deviceInfoForm = new();
             deviceInfoForm.ShowDialog();
+        }
+
+        private void btn_addCustomerInfo_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_editCustomerInfo_Click(object sender, EventArgs e)
@@ -116,12 +130,12 @@ namespace ServisniProtokol
             //{
             //    data.Add(streamReader.ReadLine());
             //}
-            
+
             while (!streamReader.EndOfStream)
             {
                 data.Add(streamReader.ReadLine());
             }
-            
+
             this.txtBox_protocolNumber.Text = data[0];
             this.txtBox_dateOfMeasurement.Text = data[1];
             this.txtBox_name.Text = data[2];
@@ -133,6 +147,13 @@ namespace ServisniProtokol
             this.txtBox_serialNumber.Text = data[8];
 
             MessageBox.Show("Protokol Naèten!");
+        }
+
+
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

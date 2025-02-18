@@ -4,3 +4,5 @@
 # Složka s kompilovanými binárními soubory
 bin/
 obj/
+
+protocol.txt
