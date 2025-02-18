@@ -1,0 +1,6 @@
+# Složka s doèasnými soubory Visual Studio
+.vs/
+
+# Složka s kompilovanými binárními soubory
+bin/
+obj/
