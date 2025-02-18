@@ -41,12 +41,20 @@ namespace ServisniProtokol
         }
         private void btn_addBasicInfo_Click(object sender, EventArgs e)
         {
-
+            BasicInfoForm basicInfoForm = new();
+            basicInfoForm.ShowDialog();
         }
 
         private void btn_editBasicInfo_Click(object sender, EventArgs e)
         {
+            if (this.txtBox_protocolNumber.Text == "?")
+            {
+                MessageBox.Show("Nejprve vyplòte data, abyste je mohli upravovat.");
+                return;
+            }
+
             BasicInfoForm basicInfoForm = new();
+            basicInfoForm.LoadData(true);
             basicInfoForm.ShowDialog();
         }
 

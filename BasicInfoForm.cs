@@ -4,9 +4,21 @@ namespace ServisniProtokol
 {
     public partial class BasicInfoForm : Form
     {
+        private const string FORM_TITLE = "Editace základních informací";
+
         public BasicInfoForm()
         {
-            InitializeComponent();    
+            InitializeComponent();
+        }
+
+        public void LoadData(bool editing)
+        {
+            if (editing)
+            {
+                this.groupBox_basicInfo.Text = FORM_TITLE;
+            }
+            this.txtBox_protocolNumber.Text = HomePageForm.instance.protocolNum.Text;
+            this.dateTimePicker.Value = DateTime.Parse(HomePageForm.instance.date.Text);
         }
 
         private void btn_save_Click(object sender, EventArgs e)
