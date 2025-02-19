@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace ServisniProtokol
 {
     public partial class HomePageForm : Form
@@ -241,7 +243,15 @@ namespace ServisniProtokol
 
         private void btn_help_Click(object sender, EventArgs e)
         {
-
+            string filePath = Path.Combine(Application.StartupPath, "README.md");
+            if (File.Exists(filePath))
+            {
+                Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+            }
+            else
+            {
+                MessageBox.Show("Soubor README.md nebyl nalezen.");
+            }
         }
     }
 }
