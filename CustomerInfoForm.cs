@@ -49,7 +49,7 @@ namespace ServisniProtokol
         {
             this.errorProvider1.Clear();
 
-            Regex regex = new("^\\p{Lu}\\p{Ll}+( \\p{Lu}\\p{Ll}+)*$");
+            Regex regex = new("^[\\p{L}\\p{M}\\p{N}\\p{P}\\p{Zs}]+$");
             if (!regex.IsMatch(name))
             {
                 this.errorProvider1.SetError(this.txtBox_name, "Zadejte validní jméno!");
@@ -69,7 +69,7 @@ namespace ServisniProtokol
                 this.errorProvider1.SetError(this.txtBox_postNum, "Zadejte validní PSČ!");
                 return;
             }
-            
+
             regex = new("^[0-9]{8}$");
             if (!regex.IsMatch(pin))
             {
