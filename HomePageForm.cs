@@ -104,6 +104,25 @@ namespace ServisniProtokol
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
+            if (this.dataGridView_measurement.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nejprve vyberte øádek, který chcete upravit.");
+                return;
+            }
+
+            if (this.dataGridView_measurement.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Mùžete upravit pouze jeden øádek najednou.");
+                return;
+            }
+
+            DataGridViewRow selectedRow = this.dataGridView_measurement.SelectedRows[0];
+            if (selectedRow.Cells.Cast<DataGridViewCell>().All(cell => cell.Value == null || string.IsNullOrWhiteSpace(cell.Value.ToString())))
+            {
+                MessageBox.Show("Nemùžete upravit neexistující data.");
+                return;
+            }
+
             MeasureInfoForm measureInfoForm = new();
             measureInfoForm.LoadData(true);
             measureInfoForm.ShowDialog();
@@ -111,6 +130,25 @@ namespace ServisniProtokol
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            if (this.dataGridView_measurement.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nejprve vyberte øádek, který chcete odstranit.");
+                return;
+            }
+
+            if (this.dataGridView_measurement.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Mùžete odstranit pouze jeden øádek najednou.");
+                return;
+            }
+
+            DataGridViewRow selectedRow = this.dataGridView_measurement.SelectedRows[0];
+            if (selectedRow.Cells.Cast<DataGridViewCell>().All(cell => cell.Value == null || string.IsNullOrWhiteSpace(cell.Value.ToString())))
+            {
+                MessageBox.Show("Nemùžete odstranit prázdný øádek.");
+                return;
+            }
+
             foreach (DataGridViewRow row in dataGridView_measurement.SelectedRows)
             {
                 dataGridView_measurement.Rows.RemoveAt(row.Index);

@@ -12,6 +12,7 @@ namespace ServisniProtokol
 {
     public partial class MeasureInfoForm : Form
     {
+        private const string FORM_TITLE = "Editace informací o měření";
         public static MeasureInfoForm instance;
         private int selectedRow;
         private bool editing;
@@ -32,6 +33,8 @@ namespace ServisniProtokol
         {
             this.editing = editing;
 
+            this.groupBox_measureInfo.Text = FORM_TITLE;
+
             this.txtBox_paramName.Text = HomePageForm.instance.dataGrid.Rows[selectedRow].Cells[0].Value.ToString();
             this.txtBox_measuredUnit.Text = HomePageForm.instance.dataGrid.Rows[selectedRow].Cells[1].Value.ToString();
             this.txtBox_unit.Text = HomePageForm.instance.dataGrid.Rows[selectedRow].Cells[2].Value.ToString();
@@ -47,6 +50,11 @@ namespace ServisniProtokol
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (!ValidateInputs())
+            {
+                return;
+            }
+
             string isValid;
             if (!this.editing)
             {
@@ -80,6 +88,35 @@ namespace ServisniProtokol
 
                 this.Close();
             }
+        }
+
+        private bool ValidateInputs()
+        {
+            string[] forbiddenChars = { "@", "#", "$", "%", "^", "&", "*" };
+            TextBox[] textBoxes = { txtBox_paramName, txtBox_measuredUnit, txtBox_unit };
+
+            bool isValid = true;
+            errorProvider1.Clear();
+
+            foreach (TextBox textBox in textBoxes)
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    errorProvider1.SetError(textBox, "Pole nemůže být prázdné.");
+                    isValid = false;
+                }
+
+                foreach (string forbiddenChar in forbiddenChars)
+                {
+                    if (textBox.Text.Contains(forbiddenChar))
+                    {
+                        errorProvider1.SetError(textBox, $"Zaddaný text obsahuje zakázané znaky: {string.Join(" ", forbiddenChars)}");
+                        isValid = false;
+                    }
+                }
+            }
+
+            return isValid;
         }
         private void btn_cancel_Click(object sender, EventArgs e)
         {
