@@ -4,19 +4,18 @@ namespace ServisniProtokol
     {
         public static HomePageForm instance;
 
-        //textboxs for basic info
         public TextBox protocolNum;
         public TextBox date;
-        //textboxs for device info
+
         public TextBox producer;
         public TextBox modelName;
         public TextBox serialNum;
-        //textboxs for customer info
+
         public TextBox name;
         public TextBox address;
         public TextBox postNum;
         public TextBox id;
-        //datagrid
+
         public DataGridView dataGrid;
 
         public HomePageForm()
@@ -164,54 +163,81 @@ namespace ServisniProtokol
         private void btn_save_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowser = new();
-            folderBrowser.ShowDialog();
+            folderBrowser.SelectedPath = Application.StartupPath;
+            if (folderBrowser.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+
             StreamWriter streamWriter = new StreamWriter($"{folderBrowser.SelectedPath}\\protocol.txt");
 
-            streamWriter.WriteLine(txtBox_protocolNumber.Text);
-            streamWriter.WriteLine(txtBox_dateOfMeasurement.Text);
-            streamWriter.WriteLine(txtBox_name.Text);
-            streamWriter.WriteLine(txtBox_address.Text);
-            streamWriter.WriteLine(txtBox_postNumber.Text);
-            streamWriter.WriteLine(txtBox_id.Text);
-            streamWriter.WriteLine(txtBox_producerName.Text);
-            streamWriter.WriteLine(txtBox_modelName.Text);
-            streamWriter.WriteLine(txtBox_serialNumber.Text);
+            try
+            {
+                streamWriter.WriteLine(txtBox_protocolNumber.Text);
+                streamWriter.WriteLine(txtBox_dateOfMeasurement.Text);
+                streamWriter.WriteLine(txtBox_name.Text);
+                streamWriter.WriteLine(txtBox_address.Text);
+                streamWriter.WriteLine(txtBox_postNumber.Text);
+                streamWriter.WriteLine(txtBox_id.Text);
+                streamWriter.WriteLine(txtBox_producerName.Text);
+                streamWriter.WriteLine(txtBox_modelName.Text);
+                streamWriter.WriteLine(txtBox_serialNumber.Text);
 
-            streamWriter.Close();
-            MessageBox.Show("Protokol Uložen!");
+                MessageBox.Show("Protokol Uložen!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nastala chyba pøi ukládání protokolu!");
+                throw;
+            }
+            finally
+            {
+                streamWriter.Close();
+            }
         }
 
         private void btn_load_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog fileDialog = new();
-            fileDialog.ShowDialog();
+
+            if (fileDialog.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+
             StreamReader streamReader = new(fileDialog.FileName);
             List<string> data = new();
 
-            //for (int i = 0; i < 9; i++)
-            //{
-            //    data.Add(streamReader.ReadLine());
-            //}
-
-            while (!streamReader.EndOfStream)
+            try
             {
-                data.Add(streamReader.ReadLine());
+                while (!streamReader.EndOfStream)
+                {
+                    data.Add(streamReader.ReadLine());
+                }
+
+                this.txtBox_protocolNumber.Text = data[0];
+                this.txtBox_dateOfMeasurement.Text = data[1];
+                this.txtBox_name.Text = data[2];
+                this.txtBox_address.Text = data[3];
+                this.txtBox_postNumber.Text = data[4];
+                this.txtBox_id.Text = data[5];
+                this.txtBox_producerName.Text = data[6];
+                this.txtBox_modelName.Text = data[7];
+                this.txtBox_serialNumber.Text = data[8];
+
+                MessageBox.Show("Protokol Naèten!");
             }
-
-            this.txtBox_protocolNumber.Text = data[0];
-            this.txtBox_dateOfMeasurement.Text = data[1];
-            this.txtBox_name.Text = data[2];
-            this.txtBox_address.Text = data[3];
-            this.txtBox_postNumber.Text = data[4];
-            this.txtBox_id.Text = data[5];
-            this.txtBox_producerName.Text = data[6];
-            this.txtBox_modelName.Text = data[7];
-            this.txtBox_serialNumber.Text = data[8];
-
-            MessageBox.Show("Protokol Naèten!");
+            catch (Exception)
+            {
+                MessageBox.Show("Nastala chyba pøi naèítání protokolu!");
+                throw;
+            }
+            finally
+            {
+                streamReader.Close();
+            }
         }
-
-
 
         private void btn_help_Click(object sender, EventArgs e)
         {
